@@ -7,9 +7,12 @@ public class Highscore : MonoBehaviour
 {
     public static Highscore Instance;
 
-    [SerializeField] HighscoreData HighscoreData;
+    [SerializeField] HighscoreData highscoreData;
 
     private UnityEvent onTimerEnd;
+
+    public UnityEvent newHighscore;
+    public UnityEvent noNewHighscore;
 
     private void Awake()
     {
@@ -29,13 +32,18 @@ public class Highscore : MonoBehaviour
 
     public void UpdateHighscore()
     {
-        if (Volvox.Instance.colonyCenter.childCount > HighscoreData.highscore)
+        if (Volvox.Instance.colonyCenter.childCount > highscoreData.highscore)
         {
-            HighscoreData.highscore = Volvox.Instance.colonyCenter.childCount;
+            highscoreData.highscore = Volvox.Instance.colonyCenter.childCount;
+            newHighscore.Invoke();
+        }
+        else
+        {
+            noNewHighscore.Invoke();
         }
     }
     public void ResetHighscore() 
     {
-        HighscoreData.highscore = 0;
+        highscoreData.highscore = 0;
     }
 }
