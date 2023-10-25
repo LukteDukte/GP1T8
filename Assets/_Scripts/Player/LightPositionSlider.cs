@@ -17,8 +17,8 @@ public class LightPositionSlider : MonoBehaviour
 
 
     [Header("Pacement Settings")] 
-    [SerializeField] private bool placeItLeft;
-    [SerializeField] private bool placeItRight;
+    public bool placeItLeft;
+    public bool placeItRight;
     [SerializeField] private int placementRangeFromCamera;
     [SerializeField] private float dpadSpeed;
     
@@ -32,6 +32,7 @@ public class LightPositionSlider : MonoBehaviour
         _maxHight = Screen.height;
         _maxWidth = Screen.width;
         
+        actions = GetComponent<PlayerInput>().actions;
         actions.FindAction("sliderRight").performed += MoveRightSlider;
         actions.FindAction("sliderLeft").performed += MoveLeftSlider;
         
@@ -46,7 +47,21 @@ public class LightPositionSlider : MonoBehaviour
 
         actions.FindAction("dpadDownLeft").started += OnDpadDownPressedLeft;
         actions.FindAction("dpadDownLeft").canceled += OnDpadDownPressedLeft;
+        
+        actions.FindAction("LightRight").performed += ctx => LightRight();
 
+    }
+
+    public void SetRightLeft(int playerIndex)
+    {
+        if (playerIndex == 0)
+        {
+            placeItLeft = true;
+        }
+        else
+        {
+            placeItRight = true;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -130,6 +145,11 @@ public class LightPositionSlider : MonoBehaviour
             isDpadDownPressedLeft = true;
         else if (context.phase == InputActionPhase.Canceled)
             isDpadDownPressedLeft = false;
+    }
+    
+    private void LightRight()
+    {
+        GetComponent<LightSource>().Toggle();        
     }
 
 }
