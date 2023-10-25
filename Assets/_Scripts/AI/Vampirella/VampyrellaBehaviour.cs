@@ -12,8 +12,9 @@ public class VampyrellaBehaviour : MonoBehaviour
     [SerializeField] float giveUpChaseTimer;
     [SerializeField] float attachedToPlayerTimer;
     [SerializeField] float attachDistance;
-    [Space(15)]
+    [Space(15)] 
     
+    [SerializeField] private Transform mouth;
     [SerializeField] GameObject player;
     [SerializeField] Volvox volvoxScript;
     Vector3 _offset;

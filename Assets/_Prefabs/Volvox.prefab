@@ -211,6 +211,7 @@ MonoBehaviour:
   colonyPrefab: {fileID: 6929706779998228030, guid: dd25fd465e478b0428f1597cd2ea3075, type: 3}
   colonyCenter: {fileID: 7022125375776764271}
   maxSpeed: 25
+  isFollowing: 1
   rb: {fileID: 3570742238440531147}
   speedFactor: 0.01
   preventOvershootingFactor: 0.42
