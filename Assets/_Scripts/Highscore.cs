@@ -11,6 +11,9 @@ public class Highscore : MonoBehaviour
 
     private UnityEvent onTimerEnd;
 
+    public UnityEvent newHighscore;
+    public UnityEvent noNewHighscore;
+
     private void Awake()
     {
         if (Instance == null)
@@ -32,6 +35,11 @@ public class Highscore : MonoBehaviour
         if (Volvox.Instance.colonyCenter.childCount > highscoreData.highscore)
         {
             highscoreData.highscore = Volvox.Instance.colonyCenter.childCount;
+            newHighscore.Invoke();
+        }
+        else
+        {
+            noNewHighscore.Invoke();
         }
     }
     public void ResetHighscore() 

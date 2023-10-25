@@ -8,10 +8,11 @@ public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager Instance;
 
-    [SerializeField] TMP_Text UIScoreText;
+    //[SerializeField] TMP_Text UIScoreText;
     [SerializeField] TMP_Text UIHighscoreText;
     [SerializeField] HighscoreData highscoreData;
-    private UnityEvent onTimerEnd;
+    private UnityEvent noNewHighscore;
+    private UnityEvent NewHighscore;
 
     private void Awake()
     {
@@ -27,21 +28,28 @@ public class GameUIManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateUIScore();
+        //UpdateUIScore();
 
-        //Adds RevealUIHighscore as a listener to onTimerEnd
-        onTimerEnd = GameObject.FindFirstObjectByType<GameTimer>().onTimerEnd;
-        onTimerEnd.AddListener(RevealUIHighscore);
+        //Adds noNew & New Highscore as a listener to onTimerEnd
+        noNewHighscore = Highscore.Instance.noNewHighscore;
+        NewHighscore = Highscore.Instance.newHighscore;
+
+        noNewHighscore.AddListener(DisplayNoNewHighscore);
+        NewHighscore.AddListener(DisplayNewHighscore);
     }
 
     public void UpdateUIScore()
     {
-        UIScoreText.text = Volvox.Instance.colonyCenter.childCount.ToString();
+        //UIScoreText.text = Volvox.Instance.colonyCenter.childCount.ToString();
     }
 
-    private void RevealUIHighscore()
+    private void DisplayNoNewHighscore()
     {
-        UIHighscoreText.text = "BEST: " + highscoreData.highscore.ToString();
+        UIHighscoreText.text = "HIGH SCORE: " + highscoreData.highscore.ToString();
+    }
+    private void DisplayNewHighscore()
+    {
+        UIHighscoreText.text = "NEW HIGH SCORE: " + highscoreData.highscore.ToString();
     }
 
 
