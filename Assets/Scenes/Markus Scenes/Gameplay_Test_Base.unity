@@ -541,6 +541,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935246237648199506, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: dpadSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 935246237648199506, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: playerIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1228393738043073108, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_Name
       value: Player(Lights) Variant
@@ -584,6 +592,18 @@ PrefabInstance:
     - target: {fileID: 6100016389139103219, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098385648445829915, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: dPadUp
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 49ddea46669fbd144a02d9ee1607a5ed, type: 3}
+    - target: {fileID: 8098385648445829915, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: dPadDown
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 49ddea46669fbd144a02d9ee1607a5ed, type: 3}
+    - target: {fileID: 8098385648445829915, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: dpadSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
