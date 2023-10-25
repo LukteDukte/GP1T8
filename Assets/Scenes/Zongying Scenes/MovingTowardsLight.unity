@@ -869,18 +869,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotiferSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 4685623060690024403, guid: 072511de4c803384babea60202b28412, type: 3}
-      propertyPath: isForTesting
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561555295973282260, guid: 072511de4c803384babea60202b28412, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561555295973282260, guid: 072511de4c803384babea60202b28412, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7923723034670993904, guid: 072511de4c803384babea60202b28412, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
