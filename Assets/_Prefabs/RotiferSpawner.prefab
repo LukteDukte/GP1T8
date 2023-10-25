@@ -51,7 +51,9 @@ MonoBehaviour:
   stayInterval: 1000
   disappearInterval: 2
   rotiferPrefab: {fileID: 1087429590977446343}
-  jumpHeightStart: -5
+  rotifer: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  spawnPointDepth: -5
   jumpHeightEnd: 3
   attackInterval: 1
   retreatInterval: 1
