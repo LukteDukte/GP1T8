@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    [SerializeField] SceneAsset gameScene;
+    [SerializeField] string gameScene;
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(gameScene.name);
+        SceneManager.LoadScene(gameScene);
     }
 }

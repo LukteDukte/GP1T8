@@ -9,13 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 617f29fad68563047b3fc005f1f01c26
   - enabled: 1
-    path: Assets/Scenes/GameTestScene.unity
-    guid: 8daf5b381f167d8429c21a882847934a
-  - enabled: 1
-    path: Assets/Scenes/Zongying Scenes/MovingTowardsLight.unity
-    guid: ab6fe53a5a1c34e4cab853b01a793d82
-  - enabled: 1
     path: Assets/Scenes/Markus Scenes/Gameplay_Test_Base.unity
     guid: e5b8177b5ff4dbe4fafb3412e1b21876
+  - enabled: 1
+    path: Assets/Scenes/Gabriel's Scenes/Level2.unity
+    guid: 7b396cc5f3e00ac45a5052395f899c2d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d495af1f17336c94887a0e9068703e70, type: 2}

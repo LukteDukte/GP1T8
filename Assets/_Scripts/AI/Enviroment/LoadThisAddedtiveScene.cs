@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadThisAddedtiveScene : MonoBehaviour
 {
-    public SceneAsset sceneToLoad;
+    public string sceneToLoad;
     // Start is called before the first frame update
     void Start()
     {
-           SceneManager.LoadScene(sceneToLoad.name, LoadSceneMode.Additive);
+           SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
     }
 
     // Update is called once per frame
