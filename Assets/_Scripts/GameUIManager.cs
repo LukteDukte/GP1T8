@@ -51,14 +51,14 @@ public class GameUIManager : MonoBehaviour
 
         //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
 
-        StartCoroutine(ReturnToTitle(6));
+        StartCoroutine(ReturnToTitle(10));
     }
     private void DisplayNewHighscore()
     {
         UIHighscoreText.text = "NEW HIGH SCORE: " + highscoreData.highscore.ToString();
 
         //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
-        StartCoroutine(ReturnToTitle(6));
+        StartCoroutine(ReturnToTitle(10));
     }
 
     private IEnumerator ReturnToTitle(float Seconds)
