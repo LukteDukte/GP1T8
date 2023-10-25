@@ -46,11 +46,25 @@ public class GameUIManager : MonoBehaviour
     private void DisplayNoNewHighscore()
     {
         UIHighscoreText.text = "HIGH SCORE: " + highscoreData.highscore.ToString();
+
+        //print(GameObject.FindFirstObjectByType<Button>().gameObject.name);
+
+        //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
+
+        StartCoroutine(ReturnToTitle(10));
     }
     private void DisplayNewHighscore()
     {
         UIHighscoreText.text = "NEW HIGH SCORE: " + highscoreData.highscore.ToString();
+
+        //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
+        StartCoroutine(ReturnToTitle(10));
     }
 
-
+    private IEnumerator ReturnToTitle(float Seconds)
+    {
+        yield return new WaitForSeconds(Seconds);
+        
+        GetComponent<ReturnToTitle>().LoadTitle();
+    }
 }
