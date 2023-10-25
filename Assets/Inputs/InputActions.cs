@@ -71,6 +71,42 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""dpadUpRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""ce4bc082-e68c-4344-b410-b6e3d97b0cb0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""dpadUpLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""c6c86628-a701-4197-bb39-80f52f7a46f4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""dpadDownRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""83f7a69f-cb6a-4362-ac85-b05829be907e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""dpadDownLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""e17a4783-e306-47e3-810a-c116e24264af"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -186,17 +222,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8c64a922-a500-416b-b2cb-b823f527f91e"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LightLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""d2206420-65a9-410c-be71-88f6c663aef6"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
@@ -208,8 +233,19 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6bba1a5e-37ac-4e73-90c8-11fb33ae5816"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""id"": ""c991c0b6-0846-4389-8700-2d827cf63b9e"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LightLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a81585e-1023-4891-bf29-67735dc7a527"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -219,8 +255,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7a81585e-1023-4891-bf29-67735dc7a527"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""id"": ""87ae1295-01b5-4e36-ab02-b34de9da5127"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -240,39 +276,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""2cf0f690-2e7c-4d5d-b95b-6804cc2085ef"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SliderLeft"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""511eb974-bfbb-415f-92c4-ed6da74708f7"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SliderLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""0f658dca-c36c-4ff4-b84a-f1f0c08d04f3"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SliderLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""211d59fa-1772-4eff-9fc6-24de7aac886f"",
                     ""path"": ""<Gamepad>/rightTrigger"",
@@ -284,37 +287,92 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""d7cda219-c9cb-4b32-9f06-252bf68fbaf5"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""95ec8d86-8243-4782-9c58-06719d0cb2db"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SliderRight"",
-                    ""isComposite"": true,
+                    ""action"": ""dpadUpRight"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""e445dc9f-375c-4ecb-95d6-123338012c41"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SliderRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""568d46f8-082d-4316-a281-f6c2bfef7812"",
+                    ""name"": """",
+                    ""id"": ""0c176285-45e4-4177-a9da-ac89611c83ee"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SliderRight"",
+                    ""action"": ""dpadUpRight"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4144d3a4-7742-4430-b74c-92443a61e6cb"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dpadDownRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ef584628-6fd9-4fa0-a17f-2d2b65bc8ea0"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dpadDownRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f44fa6c0-1a64-4e96-82bd-d40445bb93cc"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dpadUpLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b308186-7ad8-4c44-a0d9-768f62971a16"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dpadUpLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a87fb1f3-8754-4cdf-9427-88dabf36dff2"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dpadDownLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1347cd83-420c-41a7-bbc0-d988604e8b96"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dpadDownLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -328,6 +386,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_LightRight = m_Player.FindAction("LightRight", throwIfNotFound: true);
         m_Player_SliderLeft = m_Player.FindAction("SliderLeft", throwIfNotFound: true);
         m_Player_SliderRight = m_Player.FindAction("SliderRight", throwIfNotFound: true);
+        m_Player_dpadUpRight = m_Player.FindAction("dpadUpRight", throwIfNotFound: true);
+        m_Player_dpadUpLeft = m_Player.FindAction("dpadUpLeft", throwIfNotFound: true);
+        m_Player_dpadDownRight = m_Player.FindAction("dpadDownRight", throwIfNotFound: true);
+        m_Player_dpadDownLeft = m_Player.FindAction("dpadDownLeft", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -394,6 +456,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_LightRight;
     private readonly InputAction m_Player_SliderLeft;
     private readonly InputAction m_Player_SliderRight;
+    private readonly InputAction m_Player_dpadUpRight;
+    private readonly InputAction m_Player_dpadUpLeft;
+    private readonly InputAction m_Player_dpadDownRight;
+    private readonly InputAction m_Player_dpadDownLeft;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -403,6 +469,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @LightRight => m_Wrapper.m_Player_LightRight;
         public InputAction @SliderLeft => m_Wrapper.m_Player_SliderLeft;
         public InputAction @SliderRight => m_Wrapper.m_Player_SliderRight;
+        public InputAction @dpadUpRight => m_Wrapper.m_Player_dpadUpRight;
+        public InputAction @dpadUpLeft => m_Wrapper.m_Player_dpadUpLeft;
+        public InputAction @dpadDownRight => m_Wrapper.m_Player_dpadDownRight;
+        public InputAction @dpadDownLeft => m_Wrapper.m_Player_dpadDownLeft;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -427,6 +497,18 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @SliderRight.started += instance.OnSliderRight;
             @SliderRight.performed += instance.OnSliderRight;
             @SliderRight.canceled += instance.OnSliderRight;
+            @dpadUpRight.started += instance.OnDpadUpRight;
+            @dpadUpRight.performed += instance.OnDpadUpRight;
+            @dpadUpRight.canceled += instance.OnDpadUpRight;
+            @dpadUpLeft.started += instance.OnDpadUpLeft;
+            @dpadUpLeft.performed += instance.OnDpadUpLeft;
+            @dpadUpLeft.canceled += instance.OnDpadUpLeft;
+            @dpadDownRight.started += instance.OnDpadDownRight;
+            @dpadDownRight.performed += instance.OnDpadDownRight;
+            @dpadDownRight.canceled += instance.OnDpadDownRight;
+            @dpadDownLeft.started += instance.OnDpadDownLeft;
+            @dpadDownLeft.performed += instance.OnDpadDownLeft;
+            @dpadDownLeft.canceled += instance.OnDpadDownLeft;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -446,6 +528,18 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @SliderRight.started -= instance.OnSliderRight;
             @SliderRight.performed -= instance.OnSliderRight;
             @SliderRight.canceled -= instance.OnSliderRight;
+            @dpadUpRight.started -= instance.OnDpadUpRight;
+            @dpadUpRight.performed -= instance.OnDpadUpRight;
+            @dpadUpRight.canceled -= instance.OnDpadUpRight;
+            @dpadUpLeft.started -= instance.OnDpadUpLeft;
+            @dpadUpLeft.performed -= instance.OnDpadUpLeft;
+            @dpadUpLeft.canceled -= instance.OnDpadUpLeft;
+            @dpadDownRight.started -= instance.OnDpadDownRight;
+            @dpadDownRight.performed -= instance.OnDpadDownRight;
+            @dpadDownRight.canceled -= instance.OnDpadDownRight;
+            @dpadDownLeft.started -= instance.OnDpadDownLeft;
+            @dpadDownLeft.performed -= instance.OnDpadDownLeft;
+            @dpadDownLeft.canceled -= instance.OnDpadDownLeft;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -470,5 +564,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnLightRight(InputAction.CallbackContext context);
         void OnSliderLeft(InputAction.CallbackContext context);
         void OnSliderRight(InputAction.CallbackContext context);
+        void OnDpadUpRight(InputAction.CallbackContext context);
+        void OnDpadUpLeft(InputAction.CallbackContext context);
+        void OnDpadDownRight(InputAction.CallbackContext context);
+        void OnDpadDownLeft(InputAction.CallbackContext context);
     }
 }

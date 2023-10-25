@@ -10,11 +10,17 @@ public class LightPositionSlider : MonoBehaviour
     Camera _mainCamera;
     private float _lightPlacementRight;
     private float _lightPlacementLeft;
+    private bool isDpadUpPressedRight = false;
+    private bool isDpadDownPressedRight = false;
+    private bool isDpadUpPressedLeft = false;
+    private bool isDpadDownPressedLeft = false;
+
 
     [Header("Pacement Settings")] 
     [SerializeField] private bool placeItLeft;
     [SerializeField] private bool placeItRight;
     [SerializeField] private int placementRangeFromCamera;
+    [SerializeField] private float dpadSpeed;
     
     [Header("Input Actions")]
     [SerializeField] private InputActionAsset actions;
@@ -28,6 +34,19 @@ public class LightPositionSlider : MonoBehaviour
         
         actions.FindAction("sliderRight").performed += MoveRightSlider;
         actions.FindAction("sliderLeft").performed += MoveLeftSlider;
+        
+        actions.FindAction("dpadUpRight").started += OnDpadUpPressedRight;
+        actions.FindAction("dpadUpRight").canceled += OnDpadUpPressedRight;
+
+        actions.FindAction("dpadDownRight").started += OnDpadDownPressedRight;
+        actions.FindAction("dpadDownRight").canceled += OnDpadDownPressedRight;
+        
+        actions.FindAction("dpadUpLeft").started += OnDpadUpPressedLeft;
+        actions.FindAction("dpadUpLeft").canceled += OnDpadUpPressedLeft;
+
+        actions.FindAction("dpadDownLeft").started += OnDpadDownPressedLeft;
+        actions.FindAction("dpadDownLeft").canceled += OnDpadDownPressedLeft;
+
     }
     // Update is called once per frame
     void Update()
@@ -42,6 +61,28 @@ public class LightPositionSlider : MonoBehaviour
         {
             _currentHight = Mathf.Lerp(0f, _maxHight, _lightPlacementRight); // updates the float value of the current hight, based on how much you press the trigger.
             LightPlacement(_currentHight, _maxWidth); // using _currentHight and _maxWidth, to move the object in the world space.
+        }
+        
+        if (isDpadUpPressedRight)
+        {
+            // Adjust position upwards
+            _lightPlacementRight = Mathf.Clamp(_lightPlacementRight + dpadSpeed * Time.deltaTime, 0, 1);
+        }
+        else if (isDpadDownPressedRight)
+        {
+            // Adjust position downwards
+            _lightPlacementRight = Mathf.Clamp(_lightPlacementRight - dpadSpeed * Time.deltaTime, 0, 1);
+        }
+        
+        if (isDpadUpPressedLeft)
+        {
+            // Adjust position upwards
+            _lightPlacementLeft = Mathf.Clamp(_lightPlacementLeft + dpadSpeed * Time.deltaTime, 0, 1);
+        }
+        else if (isDpadDownPressedLeft)
+        {
+            // Adjust position downwards
+            _lightPlacementLeft = Mathf.Clamp(_lightPlacementLeft - dpadSpeed * Time.deltaTime, 0, 1);
         }
     }
 
@@ -59,4 +100,36 @@ public class LightPositionSlider : MonoBehaviour
     {
         _lightPlacementLeft = context.ReadValue<float>();
     } // Gets input from the left controller trigger and gives a float value of 0-1.
+    void OnDpadUpPressedRight(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            isDpadUpPressedRight = true;
+        else if (context.phase == InputActionPhase.Canceled)
+            isDpadUpPressedRight = false;
+    }
+
+    void OnDpadDownPressedRight(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            isDpadDownPressedRight = true;
+        else if (context.phase == InputActionPhase.Canceled)
+            isDpadDownPressedRight = false;
+    }
+    
+    void OnDpadUpPressedLeft(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            isDpadUpPressedLeft = true;
+        else if (context.phase == InputActionPhase.Canceled)
+            isDpadUpPressedLeft = false;
+    }
+    
+    void OnDpadDownPressedLeft(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            isDpadDownPressedLeft = true;
+        else if (context.phase == InputActionPhase.Canceled)
+            isDpadDownPressedLeft = false;
+    }
+
 }
