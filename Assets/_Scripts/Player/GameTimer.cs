@@ -11,10 +11,11 @@ public class GameTimer : MonoBehaviour
     [SerializeField] Color targetColor;
     [SerializeField] Color targetEmissionColor;
     [SerializeField] Renderer materialToChange;
-    
+
     [Header("Event")]
-    [SerializeField] UnityEvent onTimerEnd;
+    public UnityEvent onTimerEnd;
     
+    Renderer _materialToChange;
     float _maxLifeTimer;
     Color _initialColor;
     Color _initialEmissionColor;
@@ -40,6 +41,7 @@ public class GameTimer : MonoBehaviour
         {
             Debug.Log("Volvox lifespan ended. Aka Game Over");
             onTimerEnd.Invoke();
+            this.enabled = false;
         }
     }
     void ColorTransition()
@@ -47,7 +49,7 @@ public class GameTimer : MonoBehaviour
         float lerpValue = 1 - (lifeTimer / _maxLifeTimer);
         Color newEmissionColor = Color.Lerp(_initialEmissionColor, targetEmissionColor, lerpValue);
         materialToChange.material.color = Color.Lerp(_initialColor, targetColor, lerpValue);
-        Debug.Log("Lerp value: " + lerpValue);
+        // Debug.Log("Lerp value: " + lerpValue);
         materialToChange.material.SetColor("_EmissionColor", newEmissionColor);
     }
 }
