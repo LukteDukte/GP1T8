@@ -11,6 +11,7 @@ public class GameUIManager : MonoBehaviour
     //[SerializeField] TMP_Text UIScoreText;
     [SerializeField] TMP_Text UIHighscoreText;
     [SerializeField] HighscoreData highscoreData;
+    [SerializeField] public TMP_Text title;
     private UnityEvent noNewHighscore;
     private UnityEvent NewHighscore;
 

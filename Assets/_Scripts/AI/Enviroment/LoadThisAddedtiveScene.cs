@@ -41,7 +41,9 @@ public class LoadThisAddedtiveScene : MonoBehaviour
 
     IEnumerator WaitToSelectSceneToAdd(int i)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
+        GameUIManager.Instance.title.enabled = false;
+        yield return new WaitForSeconds(1);
         LoadLevel(i);
     }
 
