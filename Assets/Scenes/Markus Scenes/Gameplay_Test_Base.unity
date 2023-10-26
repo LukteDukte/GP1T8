@@ -1297,7 +1297,7 @@ MonoBehaviour:
   - {fileID: 76431395}
   - {fileID: 931253772}
   - {fileID: 327991588}
-  indexOfSceneToLoad: 2
+  indexOfSceneToLoad: 1
 --- !u!4 &599001771
 Transform:
   m_ObjectHideFlags: 0
