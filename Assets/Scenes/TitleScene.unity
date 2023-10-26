@@ -929,8 +929,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1675936597438077580, guid: db3803ee1a2ac8d4b855dbe62edc8927, type: 3}
       propertyPath: gameScene
-      value: 
-      objectReference: {fileID: 102900000, guid: e5b8177b5ff4dbe4fafb3412e1b21876, type: 3}
+      value: Gameplay_Test_Base
+      objectReference: {fileID: 0}
     - target: {fileID: 2536140676138171343, guid: db3803ee1a2ac8d4b855dbe62edc8927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 573.1816

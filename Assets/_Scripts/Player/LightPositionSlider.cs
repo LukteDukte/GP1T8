@@ -49,6 +49,7 @@ public class LightPositionSlider : MonoBehaviour
         actions.FindAction("dpadDownLeft").canceled += OnDpadDownPressedLeft;
         
         actions.FindAction("LightRight").performed += ctx => LightRight();
+        actions.FindAction("LightLeft").performed += ctx => LightLeft();
 
     }
 
@@ -149,7 +150,18 @@ public class LightPositionSlider : MonoBehaviour
     
     private void LightRight()
     {
-        GetComponent<LightSource>().Toggle();        
+        if (placeItRight)
+        {
+            GetComponent<LightSource>().Toggle();
+        }
+        
+    }
+    void LightLeft()
+    {
+        if (placeItLeft)
+        {
+            GetComponent<LightSource>().Toggle();
+        }
     }
 
 }

@@ -24,14 +24,17 @@ public class VolvoxSize : MonoBehaviour
         }
     }
 
+    // Update is called once per frame
+    /*void Update()
+    {
+        UpdateSize();
+    }*/
 
-    // Updates volvox size, sizeLevel & UIscore
+    // Updates volvox size, sizeLevel & score
     public void UpdateSize()
     {
         UpdateSizeLevel();
         UpdateVolvoxSize();
-
-        //GameUIManager.Instance.UpdateUIScore();
     }
 
     private void UpdateVolvoxSize()
@@ -43,5 +46,9 @@ public class VolvoxSize : MonoBehaviour
     private void UpdateSizeLevel()
     {
         sizeLevel = Mathf.FloorToInt((float)Volvox.Instance.colonyCenter.childCount / sizeUpRequirement);
+        if (Volvox.Instance.colonyCenter.childCount != 0 && Volvox.Instance.colonyCenter.childCount % sizeUpRequirement == 0)
+        {
+            LoadThisAddedtiveScene.Instance.LoadNextLevel();
+        }
     }
 }

@@ -6,10 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    [SerializeField] SceneAsset gameScene;
-
+    [SerializeField] string gameScene;
+    PlayerInputActions playerInputActions;
     public void LoadGame()
     {
-        SceneManager.LoadScene(gameScene.name);
+        Debug.Log("Loading");
+        SceneManager.LoadScene(gameScene);
+    }
+
+    private void Awake()
+    {
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Enable();
+    }
+    private void Update()
+    {
+        if (playerInputActions.Player.dpadDownLeft.IsPressed()  || 
+            playerInputActions.Player.dpadUpLeft.IsPressed()    || 
+            playerInputActions.Player.dpadDownRight.IsPressed() ||
+            playerInputActions.Player.dpadUpRight.IsPressed()   )
+        {
+            LoadGame();
+        }
     }
 }
