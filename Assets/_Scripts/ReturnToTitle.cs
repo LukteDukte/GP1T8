@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ReturnToTitle : MonoBehaviour
 {
-    public string titleScene;
+    public SceneAsset titleScene;
 
     public void LoadTitle()
     {
-        SceneManager.LoadScene(titleScene);
+        SceneManager.LoadScene(titleScene.name);
     }
     // Sorry Elliott! I had to change this to a string. Otherwise we couldn't create a build of the game.
 }
