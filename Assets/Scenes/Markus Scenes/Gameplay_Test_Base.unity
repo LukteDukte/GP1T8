@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeItsDisolving: 2
-  disolvingMaterial: {fileID: 2100000, guid: 8b7967d1e3fad264991f7711d9d42d9f, type: 2}
+  disolvingMaterial: {fileID: 2100000, guid: 9f3252357a506e34ba2f473c6ccb99d3, type: 2}
   targetObject: {fileID: 1020508414}
 --- !u!114 &1020508417
 MonoBehaviour:
