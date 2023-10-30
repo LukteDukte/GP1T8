@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2993677338788647839}
   - component: {fileID: 7341265726018060369}
   - component: {fileID: 3599960957139394684}
+  - component: {fileID: 5746054116644205807}
   m_Layer: 0
   m_Name: FoodV2
   m_TagString: Food
@@ -103,7 +104,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -120,6 +121,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9759ffca13f5d41a3cf79e58320dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &5746054116644205807
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263810760490333637}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.025
+  m_Center: {x: -0.0021716896, y: 0.0009657303, z: 0.000696281}
 --- !u!1 &3495762816934907458
 GameObject:
   m_ObjectHideFlags: 0
