@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PM3D_Cylinder3D
-    second: {fileID: 2100000, guid: aae6cb2dc9353a042948a1ed57fe7a5a, type: 2}
+    second: {fileID: 2100000, guid: 4a6e02cb86dc9bd4c8e27f1a495ab4b2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: 6208844056287074296823e7f27046d9, type: 2}
+    second: {fileID: 2100000, guid: 4a6e02cb86dc9bd4c8e27f1a495ab4b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
