@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Algae
   - Volvox
+  - Food
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particles
   - Water
   - UI
   - 
