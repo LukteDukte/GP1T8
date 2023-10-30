@@ -5,6 +5,7 @@ using UnityEngine;
 public class LightSource : MonoBehaviour
 {
     public GameObject lightBeam;
+    public GameObject lightBulb;
 
     public bool isOn;
 
@@ -16,6 +17,7 @@ public class LightSource : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        lightBulb.transform.position = GetProjectedPosion(transform.position);
         lightBeam.transform.position = GetProjectedPosion(transform.position);
     }
 
