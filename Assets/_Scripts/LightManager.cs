@@ -61,12 +61,12 @@ public class LightManager : MonoBehaviour
     {
         if (LightSourceLeft.isOn)
         {
-            LightSourceLeft.shootLightTowardsTargetPosition(_volvox.transform.position);
+            LightSourceLeft.ShootLightTowardsTargetPosition(_volvox.transform.position);
         }
 
         if (LightSourceRight.isOn)
         {
-            LightSourceRight.shootLightTowardsTargetPosition(_volvox.transform.position);
+            LightSourceRight.ShootLightTowardsTargetPosition(_volvox.transform.position);
         }
     }
 

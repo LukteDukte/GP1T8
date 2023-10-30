@@ -67,7 +67,7 @@ public class LoadThisAddedtiveScene : MonoBehaviour
             stage.SetActive(false);
         }
         stages[index - 1].SetActive(true);
-        string nextSceneName = "Level" + currentLevel;
+        string nextSceneName = "Level" + index;
         SceneManager.LoadScene(nextSceneName, LoadSceneMode.Additive);
     }
     
