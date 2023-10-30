@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,12 @@ public class LightSource : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    }
+
+    private void Update()
+    {
+        ShootLightTowardsTargetPosition(Volvox.Instance.transform.position);
+
     }
 
     // Update is called once per frame
@@ -49,10 +56,10 @@ public class LightSource : MonoBehaviour
         lightBeam.SetActive(false);
     }
 
-    public void shootLightTowardsTargetPosition(Vector3 targetPos)
+    public void ShootLightTowardsTargetPosition(Vector3 targetPos)
     {
-        if ((targetPos - transform.position).magnitude < 0.001f) return;
-        lightBeam.transform.forward = targetPos - transform.position;
+        if ((targetPos - lightBeam.transform.position).magnitude < 0.001f) return;
+        lightBeam.transform.forward = targetPos - lightBeam.transform.position;
     }
     public Vector3 GetProjectedPosion(Vector3 ScreenPos)
     {
