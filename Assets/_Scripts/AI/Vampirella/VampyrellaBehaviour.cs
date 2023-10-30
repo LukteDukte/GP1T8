@@ -12,8 +12,12 @@ public class VampyrellaBehaviour : MonoBehaviour
     [SerializeField] float giveUpChaseTimer;
     [SerializeField] float attachedToPlayerTimer;
     [SerializeField] float attachDistance;
-    [Space(15)]
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] audioClips;
+    [Space(15)] 
     
+    [SerializeField] private Transform mouth;
     [SerializeField] GameObject player;
     [SerializeField] Volvox volvoxScript;
     Vector3 _offset;
@@ -49,27 +53,25 @@ public class VampyrellaBehaviour : MonoBehaviour
                 TimerCountdown();
                 if (giveUpChaseTimer < _timer)
                 {
-                    Debug.Log("Give up");
                     TimerReset();
                     gameObject.transform.LookAt(player.transform.position * -1);
                     _enemyState = EnemyState.GoesAway;
                 }
                 else if (Vector3.Distance(gameObject.transform.position, player.transform.position) < attachDistance)
                 {
-                    Debug.Log("I'm attached");
+                    audioSource.PlayOneShot(audioClips[0]);
                     TimerReset();
                     _offset = transform.position - player.transform.position;
                     _enemyState = EnemyState.Attached;
                 }
                 break; // Moves towards the player. It will give up after a certain amount of time, based on [giveUpTimer]. It also sets the enemy state to [Attached] if it gets close enough to the player.
             case EnemyState.Attached:
-                Debug.Log("I'm feeding");
                 TimerCountdown();
                 KeepCurrentPositionWithObject(player.transform.position);
                 if (attachedToPlayerTimer < _timer)
                 {
                     volvoxScript.RemoveColony();
-                    Debug.Log("I'm done feeding");
+                    audioSource.PlayOneShot(audioClips[1]);
                     TimerReset();
                     gameObject.transform.LookAt(player.transform.position * -1);
                     _enemyState = EnemyState.GoesAway;
@@ -106,7 +108,6 @@ public class VampyrellaBehaviour : MonoBehaviour
             volvoxScript = collision.GetComponent<Volvox>();
             //Add some additional force towards volvox transform
             //then add force and disappearing movementspeed in the other direction, or just destroy?
-            Debug.Log("I see food!");
         }
     }
 

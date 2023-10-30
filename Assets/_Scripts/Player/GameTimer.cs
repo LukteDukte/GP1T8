@@ -41,7 +41,7 @@ public class GameTimer : MonoBehaviour
         {
             Debug.Log("Volvox lifespan ended. Aka Game Over");
             onTimerEnd.Invoke();
-            this.enabled = false;
+            enabled = false;
         }
     }
     void ColorTransition()

@@ -117,4 +117,14 @@ public class Volvox : MonoBehaviour
 
         VolvoxSize.instance.UpdateSize();
     }
+
+    public GameObject GetLatestColony()
+    {
+        GameObject latestColony = null;
+        if (colonyCenter.childCount > 0)
+        {
+            latestColony = colonyCenter.GetChild(colonyCenter.childCount - 1).gameObject;
+        }
+        return latestColony;
+    }
 }

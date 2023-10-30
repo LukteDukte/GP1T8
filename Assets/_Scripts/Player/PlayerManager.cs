@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
     private InputAction _lightRight;
     private InputAction _lightLeft;
     #endregion
+    PlayerInputManager _playerInputManager;
     private void OnEnable()
     {
         actions.Enable();
@@ -43,8 +44,13 @@ public class PlayerManager : MonoBehaviour
             Destroy(this);
         }
         
-        actions.FindAction("LightRight").performed += ctx => LightRight();
-        actions.FindAction("LightLeft").performed += ctx => LightLeft();
+        _playerInputManager = GetComponent<PlayerInputManager>();
+        _playerInputManager.onPlayerJoined += OnPlayerJoined;
+        _playerInputManager.JoinPlayer();
+        _playerInputManager.JoinPlayer();
+        
+        /*actions.FindAction("LightRight").performed += ctx => LightRight();
+        actions.FindAction("LightLeft").performed += ctx => LightLeft();*/
     }
 
     // private void FixedUpdate()
@@ -63,7 +69,7 @@ public class PlayerManager : MonoBehaviour
     //     }
     // }
 
-    private void LightRight()
+    /*private void LightRight()
     {
         // if (lightRight.activeSelf)
         // {
@@ -91,7 +97,7 @@ public class PlayerManager : MonoBehaviour
         
         lightSourceLeft.Toggle();
         
-    } // Checks if the object is active or not, and then sets it to the opposite.
+    } // Checks if the object is active or not, and then sets it to the opposite.*/
 
     public Vector3 ScreenToProjectedPoint(float x, float y)
     {
@@ -108,6 +114,49 @@ public class PlayerManager : MonoBehaviour
         float x = Random.Range(0f, Screen.width);
         float y = Random.Range(0f, Screen.height);
         return ScreenToProjectedPoint(x, y);
+    }
+    
+    void OnPlayerJoined(PlayerInput playerInput)
+    {
+        playerInput.gameObject.GetComponent<LightPositionSlider>().SetRightLeft(playerInput.playerIndex);
+        playerInput.gameObject.transform.SetParent(gameObject.transform);
+        
+        Debug.Log("I have placed this to the left!"+playerInput.gameObject.GetComponent<LightPositionSlider>().placeItLeft);
+        Debug.Log("I have placed this to the Right!"+playerInput.gameObject.GetComponent<LightPositionSlider>().placeItRight);
+        
+        if (playerInput.gameObject.GetComponent<LightPositionSlider>().placeItLeft)
+        {
+            lightSourceLeft = playerInput.gameObject.GetComponent<LightSource>();
+            Debug.Log("Left");
+        }
+        else if (playerInput.gameObject.GetComponent<LightPositionSlider>().placeItRight)
+        {
+            lightSourceRight = playerInput.gameObject.GetComponent<LightSource>();
+            Debug.Log("Right");
+        }
+        
+        if (Gamepad.all.Count > 0 && playerInput.playerIndex < Gamepad.all.Count)
+        {
+            Debug.Log(Gamepad.all.Count);
+            playerInput.SwitchCurrentControlScheme("Gamepad", Gamepad.all[playerInput.playerIndex]);
+            return;
+        }
+
+        playerInput.SwitchCurrentControlScheme($"Keyboard", Keyboard.current);
+        
+        //GetBoolFromLight(playerInput);
+    }
+
+    void GetBoolFromLight(PlayerInput playerInput)
+    {
+        if (playerInput.playerIndex == 0)
+        {
+            playerInput.gameObject.GetComponent<LightSource>();
+        }
+        else if (playerInput.playerIndex == 1)
+        {
+            playerInput.gameObject.GetComponent<LightSource>();
+        }
     }
     
 }

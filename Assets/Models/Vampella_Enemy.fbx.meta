@@ -3,7 +3,17 @@ guid: 5a00728f0c2735641b0134962faeb418
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PM3D_Cylinder3D
+    second: {fileID: 2100000, guid: 4a6e02cb86dc9bd4c8e27f1a495ab4b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 4a6e02cb86dc9bd4c8e27f1a495ab4b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

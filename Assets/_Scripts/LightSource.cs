@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class LightSource : MonoBehaviour
 {
     public GameObject lightBeam;
+    public GameObject lightBulb;
 
     public bool isOn;
 
@@ -13,9 +15,16 @@ public class LightSource : MonoBehaviour
     {
     }
 
+    private void Update()
+    {
+        ShootLightTowardsTargetPosition(Volvox.Instance.transform.position);
+
+    }
+
     // Update is called once per frame
     void LateUpdate()
     {
+        lightBulb.transform.position = GetProjectedPosion(transform.position);
         lightBeam.transform.position = GetProjectedPosion(transform.position);
     }
 
@@ -47,10 +56,10 @@ public class LightSource : MonoBehaviour
         lightBeam.SetActive(false);
     }
 
-    public void shootLightTowardsTargetPosition(Vector3 targetPos)
+    public void ShootLightTowardsTargetPosition(Vector3 targetPos)
     {
-        if ((targetPos - transform.position).magnitude < 0.001f) return;
-        lightBeam.transform.forward = targetPos - transform.position;
+        if ((targetPos - lightBeam.transform.position).magnitude < 0.001f) return;
+        lightBeam.transform.forward = targetPos - lightBeam.transform.position;
     }
     public Vector3 GetProjectedPosion(Vector3 ScreenPos)
     {

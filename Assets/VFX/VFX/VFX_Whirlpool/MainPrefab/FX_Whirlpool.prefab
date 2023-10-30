@@ -387,6 +387,14 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5334511313010463889, guid: 370a25caf8c5e7d4989de6e3ef4b1ce3, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334511313010463889, guid: 370a25caf8c5e7d4989de6e3ef4b1ce3, type: 3}
+      propertyPath: InitialModule.startColor.minColor.a
+      value: 0.44705883
+      objectReference: {fileID: 0}
     - target: {fileID: 6951327087020862167, guid: 370a25caf8c5e7d4989de6e3ef4b1ce3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
