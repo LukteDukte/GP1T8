@@ -44,6 +44,7 @@ public class LoadThisAddedtiveScene : MonoBehaviour
         if (currentLevel == 2)
         {
             isCountingDown = true;
+            GameUIManager.Instance.startUITimer();
         }
     }
 

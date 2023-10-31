@@ -11,6 +11,7 @@ public class UITimer : MonoBehaviour
 
     void Start()
     {
+        totalTime = GameTimer.Instance.maxLifeTimer;
         currentTime = totalTime;
     }
 
