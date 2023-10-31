@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] string gameScene;
     PlayerInputActions playerInputActions;
-    public void LoadGame()
+    public IEnumerator LoadGame()
     {
         Debug.Log("Loading");
+
+        animator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
         SceneManager.LoadScene(gameScene);
     }
 
@@ -26,7 +32,7 @@ public class TitleManager : MonoBehaviour
             playerInputActions.Player.dpadDownRight.IsPressed() ||
             playerInputActions.Player.dpadUpRight.IsPressed()   )
         {
-            LoadGame();
+            StartCoroutine( LoadGame() );
         }
     }
 }
