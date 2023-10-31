@@ -46,6 +46,14 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Builds/Microvirse\The Microbial Maniacs.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\marku\Documents\Builds\Microvirse" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Softwares\Unitys\2022.3.8f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\marku\Documents\GP1 -debugCodeOptimization" />
@@ -92,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698743837907</updated>
       <workItem from="1698743841039" duration="202000" />
-      <workItem from="1698744071059" duration="4879000" />
+      <workItem from="1698744071059" duration="5029000" />
     </task>
     <servers />
   </component>
