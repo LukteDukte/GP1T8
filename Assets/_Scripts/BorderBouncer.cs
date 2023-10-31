@@ -58,7 +58,7 @@ public class BorderBouncer : MonoBehaviour
         maxX = Screen.width - minX;
         minY = (1f - outsideRangeFactor) / 2f * Screen.height;
         maxY = Screen.height - minY;
-        print(Camera.main.WorldToScreenPoint(transform.position));
+        // print(Camera.main.WorldToScreenPoint(transform.position));
     }
 
     private void FixedUpdate()
