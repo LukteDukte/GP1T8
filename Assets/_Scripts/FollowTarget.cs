@@ -28,13 +28,10 @@ public class FollowTarget : MonoBehaviour
         Vector3 pos2 = ClampedScreenPosToWorld(0, Screen.height);
         Vector3 pos3 = ClampedScreenPosToWorld(Screen.width, Screen.height);
         Vector3 pos4 = ClampedScreenPosToWorld(Screen.width, 0);
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(pos1, pos2);
         Gizmos.color = Color.green;
+        Gizmos.DrawLine(pos1, pos2);
         Gizmos.DrawLine(pos2, pos3);
-        Gizmos.color = Color.blue;
         Gizmos.DrawLine(pos3, pos4);
-        Gizmos.color = Color.white;
         Gizmos.DrawLine(pos4, pos1);
     }
 
