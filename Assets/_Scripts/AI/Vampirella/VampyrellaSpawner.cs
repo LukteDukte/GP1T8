@@ -5,55 +5,55 @@ using UnityEngine;
 
 public class VampyrellaSpawner : MonoBehaviour
 {
-    // Serialized field for the Vampyrella prefab
     [SerializeField] private GameObject vampyrellaPrefab;
-
-    // Serialized field for the spawn interval
     [SerializeField] private float vampyrellaSpawnInterval = 3f;
-
-    // Serialized fields for controlling the direction
     [SerializeField] private float minAngle = 1f;
     [SerializeField] private float maxAngle = 169f;
-
-    // Add a serialized field to set the size of the instantiated object
     [SerializeField] private Vector3 objectSize = Vector3.one;
+
+    // Add a serialized field for the collider size with a default value of (5, 5, 5)
+    [SerializeField] private Vector3 colliderSize = new Vector3(5f, 5f, 5f);
 
     void Start()
     {
-        // Start spawning Vampyrella objects
         StartCoroutine(SpawnVampyrella(vampyrellaSpawnInterval, vampyrellaPrefab));
     }
 
     private IEnumerator SpawnVampyrella(float interval, GameObject vampyrella)
     {
-        // Wait for the specified interval
         yield return new WaitForSeconds(interval);
-
-        // Calculate a random angle within the specified range
         float randomAngle = UnityEngine.Random.Range(minAngle, maxAngle);
-
-        // Get the current rotation of the spawner
         Quaternion spawnerRotation = transform.rotation;
-
-        // Apply the random angle to the spawner's rotation
         Quaternion rotation = Quaternion.Euler(0, randomAngle, 0);
-
-        // Combine the spawner's rotation with the random rotation
         Quaternion finalRotation = spawnerRotation * rotation;
 
         // Instantiate the object with the specified size
         GameObject newVampyrella = Instantiate(vampyrella, transform.position, finalRotation);
-
-        // Set the size of the instantiated object
         newVampyrella.transform.localScale = objectSize;
 
-        // Parent the new object to the spawner
-        newVampyrella.transform.SetParent(transform);
+        // Get the collider attached to the instantiated object
+        Collider newCollider = newVampyrella.GetComponent<Collider>();
 
-        // Set the name of the new object
+        // Check if there is a collider on the instantiated object
+        if (newCollider != null)
+        {
+            // Set the size of the collider
+            if (newCollider is BoxCollider)
+            {
+                // If it's a BoxCollider, set its size
+                ((BoxCollider)newCollider).size = colliderSize;
+            }
+            else if (newCollider is SphereCollider)
+            {
+                // If it's a SphereCollider, set its radius
+                ((SphereCollider)newCollider).radius = colliderSize.x;
+            }
+            // Add more conditions for other types of colliders as needed
+        }
+
+        newVampyrella.transform.SetParent(transform);
         newVampyrella.name = "Vampyrella";
 
-        // Continue spawning Vampyrella objects
         StartCoroutine(SpawnVampyrella(interval, newVampyrella));
     }
 }
