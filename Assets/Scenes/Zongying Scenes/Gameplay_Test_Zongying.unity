@@ -3513,12 +3513,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353d019e339a4bc47ac04a0828d5412c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level2
   stages:
+  - {fileID: 1294828244}
   - {fileID: 1294828244}
   - {fileID: 487779006}
   - {fileID: 730666028}
+  - {fileID: 730666028}
+  - {fileID: 730666028}
+  colonyRequiredToTheNextLevel: 000000000100000002000000030000000400000005000000
   indexOfSceneToLoad: 1
+  maxLevel: 5
+  isCountingDown: 0
 --- !u!4 &1373795798
 Transform:
   m_ObjectHideFlags: 0
@@ -4703,7 +4708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2550594290139305827, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: lifeTimer
-      value: 160
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2550594290139305827, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.size

@@ -7,17 +7,18 @@ using UnityEngine.Serialization;
 
 public class LoadThisAddedtiveScene : MonoBehaviour
 {
-    public string sceneToLoad;
+    // public string sceneToLoad;
 
     public static LoadThisAddedtiveScene Instance;
 
     public GameObject[] stages;
-    private int currentLevel = 1;
-
-    public int indexOfSceneToLoad;
 
     public int[] colonyRequiredToTheNextLevel;
     
+    private int currentLevel = 1;
+    public int indexOfSceneToLoad;
+    public int maxLevel = 5;
+    public bool isCountingDown = false;
 
     private void Awake()
     {
@@ -40,6 +41,10 @@ public class LoadThisAddedtiveScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentLevel == 2)
+        {
+            isCountingDown = true;
+        }
     }
 
     IEnumerator WaitToSelectSceneToAdd(int i)
@@ -53,7 +58,7 @@ public class LoadThisAddedtiveScene : MonoBehaviour
     public void LoadNextLevel()
     {
         print(currentLevel + "level  is unloaded");
-        if (currentLevel == 3) return;
+        if (currentLevel == maxLevel) return;
 
         UnloadLevel(currentLevel);
 
@@ -69,15 +74,21 @@ public class LoadThisAddedtiveScene : MonoBehaviour
         {
             stage.SetActive(false);
         }
-        stages[index - 1].SetActive(true);
+        stages[index].SetActive(true);
         string nextSceneName = "Level" + index;
         SceneManager.LoadScene(nextSceneName, LoadSceneMode.Additive);
     }
     
     void UnloadLevel(int index)
     {
-        stages[index - 1].SetActive(false);
+        stages[index].SetActive(false);
         string currentSceneName = "Level" + index;
         SceneManager.UnloadSceneAsync(currentSceneName);
+    }
+    
+    public bool IfReachRequiredAmount(int amount)
+    {
+        int RequiredAmount = colonyRequiredToTheNextLevel[currentLevel];
+        return amount >= RequiredAmount;
     }
 }

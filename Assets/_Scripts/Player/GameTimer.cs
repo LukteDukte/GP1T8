@@ -6,19 +6,19 @@ using UnityEngine.Serialization;
 public class GameTimer : MonoBehaviour
 {
     #region Config
-    [Header("GameTime Settings")]
-    public float lifeTimer;
+
+    [Header("GameTime Settings")] public float lifeTimer;
     [SerializeField] Color targetColor;
     [SerializeField] Color targetEmissionColor;
     [SerializeField] Renderer materialToChange;
 
-    [Header("Event")]
-    public UnityEvent onTimerEnd;
-    
+    [Header("Event")] public UnityEvent onTimerEnd;
+
     Renderer _materialToChange;
     float _maxLifeTimer;
     Color _initialColor;
     Color _initialEmissionColor;
+
     #endregion
 
     private void Awake()
@@ -29,13 +29,16 @@ public class GameTimer : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {            
-            
+    {
+        if (LoadThisAddedtiveScene.Instance.isCountingDown)
+        {
             lifeTimer -= Time.fixedDeltaTime;
-            LifeChecker();
-            ColorTransition();
+        }
+
+        LifeChecker();
+        ColorTransition();
     }
-    
+
     void LifeChecker()
     {
         if (lifeTimer <= 0)
@@ -45,6 +48,7 @@ public class GameTimer : MonoBehaviour
             enabled = false;
         }
     }
+
     void ColorTransition()
     {
         float lerpValue = 1 - (lifeTimer / _maxLifeTimer);
