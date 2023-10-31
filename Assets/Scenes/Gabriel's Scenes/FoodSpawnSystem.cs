@@ -83,7 +83,7 @@ public class FoodSpawnSystem : MonoBehaviour
 
 
 
-
+        //To set all food into the loaded scene.
         {
             // Find all GameObjects with the specified tag in all loaded scenes.
             GameObject[] objectsToMove = GameObject.FindGameObjectsWithTag("Food");
@@ -105,9 +105,7 @@ public class FoodSpawnSystem : MonoBehaviour
             }
         }
 
-
-
-
+   
 
 
     }
@@ -120,6 +118,17 @@ public class FoodSpawnSystem : MonoBehaviour
         activeFoodInstances.Remove(foodInstance);
         TrySpawnFood(); // Spawn a new food item when one is destroyed
         Debug.Log("fooddestroy triggered");
+    }
+
+
+    void OnDestroy()
+    {
+        GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("Food");
+
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
     }
 
 }
