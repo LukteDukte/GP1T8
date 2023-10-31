@@ -16,6 +16,9 @@ public class LoadThisAddedtiveScene : MonoBehaviour
 
     public int indexOfSceneToLoad;
 
+    public int[] colonyRequiredToTheNextLevel;
+    
+
     private void Awake()
     {
         if (Instance == null)

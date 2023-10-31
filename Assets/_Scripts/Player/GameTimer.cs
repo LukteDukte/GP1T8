@@ -30,6 +30,7 @@ public class GameTimer : MonoBehaviour
 
     private void FixedUpdate()
     {            
+            
             lifeTimer -= Time.fixedDeltaTime;
             LifeChecker();
             ColorTransition();
