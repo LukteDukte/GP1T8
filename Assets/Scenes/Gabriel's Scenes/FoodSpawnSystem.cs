@@ -85,7 +85,27 @@ public class FoodSpawnSystem : MonoBehaviour
             currentSpawnPointIndex++;
         }
 
-        // Rest of your code...
+        //To set all food into the loaded scene.
+        {
+            // Find all GameObjects with the specified tag in all loaded scenes.
+            GameObject[] objectsToMove = GameObject.FindGameObjectsWithTag("Food");
+
+            // Get the current scene of the GameObject with this script.
+            Scene currentScene = gameObject.scene;
+
+            foreach (GameObject obj in objectsToMove)
+            {
+                // Get the scene of the object with the tag.
+                Scene targetScene = obj.scene;
+
+                // Check if the object is not in the same scene as the one with this script.
+                if (targetScene != currentScene)
+                {
+                    // Move the object to the current scene.
+                    SceneManager.MoveGameObjectToScene(obj, currentScene);
+                }
+            }
+        }
     }
 
     public void FoodDestroyed(GameObject foodInstance)
