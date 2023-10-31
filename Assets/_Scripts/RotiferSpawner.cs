@@ -7,6 +7,10 @@ using UnityEngine;
 public class RotiferSpawner : MonoBehaviour
 {
     public bool isForTesting = false;
+
+    [Header("Bubble")] public float bubbleInterval = 2f;
+    public ParticleSystem bubble;
+
     [Header("Whirlpool")] public GameObject whirlpoolPrefab;
     public Whirlpool whirlpool;
 
@@ -87,11 +91,14 @@ public class RotiferSpawner : MonoBehaviour
 
     IEnumerator Waiting()
     {
+        bubble.Stop();
         whirlpool.play = false;
         whirlpool.isSucking = false;
         rotiferPrefab.SetActive(false);
         yield return new WaitForSeconds(disappearInterval);
         transform.position = PlayerManager.Instance.RandomPointWithinProjectedRange();
+        bubble.Play();
+        yield return new WaitForSeconds(bubbleInterval);
         whirlpool.play = true;
         whirlpool.isSucking = true;
 
@@ -123,6 +130,7 @@ public class RotiferSpawner : MonoBehaviour
 
         whirlpool.isSucking = false;
         whirlpool.play = false;
+        bubble.Stop();
         StartCoroutine(Waiting());
     }
 
