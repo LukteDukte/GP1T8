@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isForTesting: 0
+  bubbleInterval: 3
+  bubble: {fileID: 1097618028838763467}
   whirlpoolPrefab: {fileID: 2542226947575496681}
   whirlpool: {fileID: 3134305665091442260}
-  stayInterval: 1000
+  stayInterval: 2
   disappearInterval: 1
   rotiferPrefab: {fileID: 6127234658955214577}
   rotifer: {fileID: 1831298598710609245}
@@ -333,6 +335,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f78153d6ddee01a488dcd116a9c80f31, type: 3}
+--- !u!198 &1097618028838763467 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8697615485107206836, guid: f78153d6ddee01a488dcd116a9c80f31, type: 3}
+  m_PrefabInstance: {fileID: 8615288211385598335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2217014045412983717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7587382833067016922, guid: f78153d6ddee01a488dcd116a9c80f31, type: 3}

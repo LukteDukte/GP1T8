@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.072267726, g: 0.5283019, b: 0.29175344, a: 1}
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -180,6 +180,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5319a515326bdab44a37be020159f748, type: 3}
+--- !u!1001 &59362696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959567380103792616, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9211904421403900983, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
+      propertyPath: m_Name
+      value: FX_Lightdust
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fe819c18233e6d45be63c848bc49f82, type: 3}
 --- !u!1 &76431395
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &76431396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,16 +366,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7549436607708545330, guid: 6f8398b9b3f4e694098e0122b70b1eb0, type: 3}
-      propertyPath: maxAngle
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7549436607708545330, guid: 6f8398b9b3f4e694098e0122b70b1eb0, type: 3}
-      propertyPath: minAngle
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7549436607708545330, guid: 6f8398b9b3f4e694098e0122b70b1eb0, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7549436607708545330, guid: 6f8398b9b3f4e694098e0122b70b1eb0, type: 3}
       propertyPath: vampyrellaSpawnInterval
@@ -813,7 +862,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 0.5
+  m_FocalLength: 0.63
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -828,7 +877,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 76.8746
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -854,8 +903,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461333622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.67559016, y: 0, z: 0, w: 0.7372774}
-  m_LocalPosition: {x: 0, y: 13, z: 0}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 0.42, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1862,6 +1911,10 @@ PrefabInstance:
       propertyPath: lightSourceRight
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 839600426745301774, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 935246237648199506, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: dpadSpeed
       value: 1
@@ -1939,12 +1992,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3371786824330026482, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
-      propertyPath: sizeIncreesedBy
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3371786824330026482, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: sizeUpRequirement
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3796049724760229883, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_IsActive
@@ -1952,7 +2001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884980261468991471, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6008370624173500679, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_IsActive
@@ -3388,3 +3437,4 @@ SceneRoots:
   - {fileID: 1482349082}
   - {fileID: 599001771}
   - {fileID: 1915154533}
+  - {fileID: 59362696}
