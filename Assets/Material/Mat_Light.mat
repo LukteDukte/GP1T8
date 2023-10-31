@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FogSpeed: 5.54
-    - _Opacity: 1.69
+    - _Opacity: 1.27
     - _QueueControl: 0
     - _QueueOffset: 0
     - _power: 0.37
