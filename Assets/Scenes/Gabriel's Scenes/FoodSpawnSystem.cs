@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FoodSpawnSystem : MonoBehaviour
 {
+    public int setSizeRequirement;
     public GameObject[] foodPrefabs; // Array to store the food prefabs
     public List<Transform> spawnPoints = new List<Transform>();
     public int maxFoodInstances = 2;
@@ -34,6 +35,44 @@ public class FoodSpawnSystem : MonoBehaviour
         {
             TrySpawnFood();
         }
+
+
+
+
+
+
+
+
+
+        // Find the target GameObject by its tag.
+        GameObject playerVolvox = GameObject.FindGameObjectWithTag("Volvox");
+
+        if (playerVolvox != null)
+        {
+            VolvoxSize volvoxSize = playerVolvox.GetComponent<VolvoxSize>();
+
+            if (volvoxSize != null)
+            {
+                // Modify the public variable in the script.
+                volvoxSize.sizeUpRequirement = setSizeRequirement;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private void Update()

@@ -9,7 +9,7 @@ public class VolvoxSize : MonoBehaviour
     [SerializeField] float baseSize;
     [SerializeField] float sizeIncreesedBy;
 
-    [SerializeField] int sizeUpRequirement;
+    public int sizeUpRequirement;
     [SerializeField] int sizeLevel;
 
     private void Awake()
