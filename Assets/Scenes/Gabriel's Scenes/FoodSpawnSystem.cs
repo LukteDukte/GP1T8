@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class FoodSpawnSystem : MonoBehaviour
 {
@@ -79,6 +80,36 @@ public class FoodSpawnSystem : MonoBehaviour
 
             currentSpawnPointIndex++;
         }
+
+
+
+
+        {
+            // Find all GameObjects with the specified tag in all loaded scenes.
+            GameObject[] objectsToMove = GameObject.FindGameObjectsWithTag("Food");
+
+            // Get the current scene of the GameObject with this script.
+            Scene currentScene = gameObject.scene;
+
+            foreach (GameObject obj in objectsToMove)
+            {
+                // Get the scene of the object with the tag.
+                Scene targetScene = obj.scene;
+
+                // Check if the object is not in the same scene as the one with this script.
+                if (targetScene != currentScene)
+                {
+                    // Move the object to the current scene.
+                    SceneManager.MoveGameObjectToScene(obj, currentScene);
+                }
+            }
+        }
+
+
+
+
+
+
     }
 
 
