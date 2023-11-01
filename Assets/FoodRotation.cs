@@ -5,7 +5,6 @@ public class FoodRotation : MonoBehaviour
     // Start is called before the first frame update
     public bool isRandomInitRotaton;
     public bool isRandomRotationSpeed;
-
     public Vector3 initEulerAngle;
     public Vector3 RotationSpeedInEulerAngle;
     void Start()

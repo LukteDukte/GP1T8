@@ -943,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1473569564635310098, guid: 072511de4c803384babea60202b28412, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685623060690024403, guid: 072511de4c803384babea60202b28412, type: 3}
       propertyPath: stayInterval
@@ -1651,6 +1651,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &841567950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778764120345425300, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662566524848920870, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_Name
+      value: VampirellaV3Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662566524848920870, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
 --- !u!4 &857742210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8228034638136919587, guid: 8f53da695ade51f4ab6ef0b371bcff06, type: 3}
@@ -5398,3 +5459,4 @@ SceneRoots:
   - {fileID: 994895464}
   - {fileID: 397753852}
   - {fileID: 947380118}
+  - {fileID: 841567950}
