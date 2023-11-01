@@ -20,6 +20,7 @@ public class LoadThisAddedtiveScene : MonoBehaviour
     public int maxLevel = 5;
     public bool isCountingDown = false;
 
+    
     private void Awake()
     {
         if (Instance == null)
