@@ -30,10 +30,6 @@ public class Volvox : MonoBehaviour
 
     private LightManager _lightManager;
     private FollowTarget _followTarget;
-    
-    [Header("VFX")]
-    [SerializeField] GameObject VFX_ColonyPlus;
-    [SerializeField] GameObject VFX_ColonyMinus;
 
     private void Awake()
     {
@@ -107,7 +103,6 @@ public class Volvox : MonoBehaviour
         newColony.transform.SetParent(colonyCenter);
         newColony.transform.position += colonyCenter.position + randomPos;
 
-        Instantiate(VFX_ColonyPlus, transform.position, Quaternion.identity);
         VolvoxSize.instance.UpdateSize();
     }
 
@@ -120,7 +115,6 @@ public class Volvox : MonoBehaviour
             print("colony sucked!");
         }
 
-        Instantiate(VFX_ColonyMinus, transform.position, Quaternion.identity);
         VolvoxSize.instance.UpdateSize();
     }
 

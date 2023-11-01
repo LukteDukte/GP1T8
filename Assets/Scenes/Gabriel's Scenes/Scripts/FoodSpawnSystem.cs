@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class FoodSpawnSystem : MonoBehaviour
 {
-    public int setSizeRequirement;
+    [SerializeField] private int setSizeRequirement;
+    [SerializeField] private Vector3 objectSize = Vector3.one;
     public GameObject[] foodPrefabs; // Array to store the food prefabs
     public List<Transform> spawnPoints = new List<Transform>();
     public int maxFoodInstances = 2;
@@ -17,6 +18,7 @@ public class FoodSpawnSystem : MonoBehaviour
     private List<GameObject> activeFoodInstances = new List<GameObject>();
     private List<Transform> shuffledSpawnPoints = new List<Transform>();
     private int currentSpawnPointIndex = 0;
+
 
     private void Awake()
     {
@@ -42,8 +44,8 @@ public class FoodSpawnSystem : MonoBehaviour
 
 
 
-
-
+        /*
+        //To change the size up requirement at each stage
         // Find the target GameObject by its tag.
         GameObject playerVolvox = GameObject.FindGameObjectWithTag("Volvox");
 
@@ -57,7 +59,7 @@ public class FoodSpawnSystem : MonoBehaviour
                 volvoxSize.sizeUpRequirement = setSizeRequirement;
             }
         }
-
+        */
 
 
 
@@ -117,6 +119,7 @@ public class FoodSpawnSystem : MonoBehaviour
 
                 // Instantiate the selected prefab
                 GameObject foodInstance = Instantiate(foodPrefabs[randomPrefabIndex], spawnPoint.position, Quaternion.identity);
+                foodInstance.transform.localScale = objectSize; //Control size of food
                 foodInstance.tag = foodTag; // Assign the foodTag to the new instance
                 activeFoodInstances.Add(foodInstance);
             }
