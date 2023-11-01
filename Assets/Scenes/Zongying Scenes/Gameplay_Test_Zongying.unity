@@ -2398,6 +2398,8 @@ MonoBehaviour:
   rb: {fileID: 947380126}
   speedFactor: 0.01
   preventOvershootingFactor: 0.42
+  vfx_ColonyPlus: {fileID: 0}
+  vfx_ColonyMinus: {fileID: 0}
 --- !u!54 &947380126
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3452,7 +3454,7 @@ MonoBehaviour:
   - {fileID: 730666028}
   - {fileID: 730666028}
   colonyRequiredToTheNextLevel: 000000000100000002000000030000000400000005000000
-  indexOfSceneToLoad: 1
+  indexOfSceneToLoad: 2
   maxLevel: 5
   isCountingDown: 0
 --- !u!4 &1373795798
