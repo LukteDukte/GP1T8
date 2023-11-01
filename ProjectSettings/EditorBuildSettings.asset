@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Karin's Scenes/CutScene_MainMenu.unity
     guid: 4070f1a5c2772f949820f7e2c96c0e57
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
-    guid: 617f29fad68563047b3fc005f1f01c26
-  - enabled: 1
     path: Assets/Scenes/Markus Scenes/Gameplay_Test_Base.unity
     guid: e5b8177b5ff4dbe4fafb3412e1b21876
   - enabled: 1
@@ -24,7 +21,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Gabriel's Scenes/Levels/Level3.unity
     guid: 85fd7896b44a9f847ae7c78ac6190559
   - enabled: 1
-    path: Assets/Scenes/Markus Scenes/Gameplay_Test_Markus2.unity
-    guid: c05f308e1dafc9d46b886a351d4f67d9
+    path: Assets/Scenes/Gabriel's Scenes/Levels/Level4.unity
+    guid: 0395ef7441f2afa45ba456d6373eae7c
+  - enabled: 1
+    path: Assets/Scenes/Gabriel's Scenes/Levels/Level5.unity
+    guid: 7334ae31cb2ef7244a76ffea676e42c3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d495af1f17336c94887a0e9068703e70, type: 2}

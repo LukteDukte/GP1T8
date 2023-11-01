@@ -54,7 +54,7 @@ public class GameUIManager : MonoBehaviour
 
     private void DisplayNoNewHighscore()
     {
-        UIHighscoreText.text = "HIGH SCORE: " + highscoreData.highscore.ToString();
+        UIHighscoreText.text = "YOUR SCORE: " + highscoreData.highscore.ToString();
 
         //print(GameObject.FindFirstObjectByType<Button>().gameObject.name);
 
