@@ -2484,11 +2484,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3371786824330026482, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: sizeIncreesedBy
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3371786824330026482, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: sizeUpRequirement
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3796049724760229883, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_IsActive

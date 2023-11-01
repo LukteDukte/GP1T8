@@ -307,7 +307,7 @@ PrefabInstance:
       objectReference: {fileID: 3662566524848920870, guid: 67cdd8ab301d20341a5475600a2bdd8e, type: 3}
     - target: {fileID: 7549436607708545330, guid: 6f8398b9b3f4e694098e0122b70b1eb0, type: 3}
       propertyPath: vampyrellaSpawnInterval
-      value: 15
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
