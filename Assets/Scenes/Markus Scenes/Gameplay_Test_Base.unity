@@ -2478,6 +2478,10 @@ PrefabInstance:
       propertyPath: dpadSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8521052678927760765, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3182222847745245365, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
     - {fileID: 5240130610695718493, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}

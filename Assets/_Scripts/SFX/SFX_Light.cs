@@ -15,7 +15,7 @@ public class SFX_Light : MonoBehaviour
     [SerializeField] AudioSource lightHums;
     [SerializeField] SFX_AudioClips[] audioClips2;
     
-    LightPositionSlider _lightPositionSlider;
+    [SerializeField] LightPositionSlider _lightPositionSlider;
     bool _isOn, _isRight;
     
     // Start is called before the first frame update
