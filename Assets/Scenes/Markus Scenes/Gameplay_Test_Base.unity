@@ -1421,13 +1421,7 @@ MonoBehaviour:
   - {fileID: 76431395}
   - {fileID: 931253772}
   - {fileID: 327991588}
-<<<<<<< HEAD
-  - {fileID: 327991588}
-  - {fileID: 327991588}
-  colonyRequiredToTheNextLevel: 000000000300000004000000050000000600000007000000
-=======
   - {fileID: 371530873}
->>>>>>> 2494160c88234f2215d58b84d7a6458189d39f98
   indexOfSceneToLoad: 1
   maxLevel: 5
   isCountingDown: 0
