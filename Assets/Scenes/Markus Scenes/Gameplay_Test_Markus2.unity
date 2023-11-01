@@ -1885,6 +1885,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player(Lights) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2460370943198411816, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: vfx_ColonyPlus
+      value: 
+      objectReference: {fileID: 8061957920273469990, guid: 9ada6cb5f74333944a710edd489d1e5c, type: 3}
+    - target: {fileID: 2460370943198411816, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
+      propertyPath: vfx_ColonyMinus
+      value: 
+      objectReference: {fileID: 2354593425659304919, guid: 93f17a6fc5489724098701cc26c43fdc, type: 3}
     - target: {fileID: 3796049724760229883, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: m_IsActive
       value: 0
