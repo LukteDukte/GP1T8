@@ -756,7 +756,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb3c4eba14cabb42a781feb2cb333a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 2263810760490333637, guid: e961a9914d1e2624f92f5eec0f4183d1, type: 3}
+  setSizeRequirement: 18
+  foodPrefabs:
+  - {fileID: 3957808766659211161, guid: 1883f5f539eacea48bfdd6f564d1fc6b, type: 3}
+  - {fileID: 6585335808918226422, guid: 045061a60723f70449bc51774bf4e3d0, type: 3}
+  - {fileID: 8430041764327417964, guid: 0a019d5293024474a882fbdbd80f57d6, type: 3}
   spawnPoints: []
   maxFoodInstances: 4
   minFoodInstances: 4
