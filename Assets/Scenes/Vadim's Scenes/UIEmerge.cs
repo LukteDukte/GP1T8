@@ -6,6 +6,7 @@ public class UIEmerge : MonoBehaviour
 {
     private SpriteRenderer renderer;
     private UIKeyFrame frameAnimation;
+    [SerializeField] private bool canKeyFrame = false;
     [SerializeField] private float animationDelay = 0f;
     [SerializeField] private Vector3 yPos;
     [SerializeField] private float opaqueValue = 1f;
@@ -18,7 +19,6 @@ public class UIEmerge : MonoBehaviour
     {
         renderer = GetComponent<SpriteRenderer>();
         frameAnimation = GetComponent<UIKeyFrame>();
-        print(frameAnimation);
         Invoke("MoveUpwards", animationDelay);
 
     }
@@ -27,13 +27,14 @@ public class UIEmerge : MonoBehaviour
         Color opaque = new Color(renderer.color.r, renderer.color.g, renderer.color.b, opaqueValue);
         transform.DOLocalMove(yPos, moveDuration).SetEase(moveEase, easeDuration);
 
-        if (frameAnimation == null)
-        {
-            renderer.DOColor(opaque, colorDuration).SetEase(colorEase, easeDuration);
+        renderer.DOColor(opaque, colorDuration).SetEase(colorEase, easeDuration);
 
-        } else
-        {
-            renderer.DOColor(opaque, colorDuration).SetEase(colorEase, easeDuration).OnComplete(frameAnimation.Work);
-        }
+        //if (frameAnimation == null)
+        //{
+
+        //} else
+        //{
+        //    renderer.DOColor(opaque, colorDuration).SetEase(colorEase, easeDuration).OnComplete(() => frameAnimation.Work(canKeyFrame));
+        //}
     }
 }

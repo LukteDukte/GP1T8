@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.6
@@ -503,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 3.5
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.2
@@ -881,6 +883,63 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &574872035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3606719485110068140, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_Name
+      value: Tutorial-Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.759911
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.89249
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.3669996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540120660415314522, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 574d495fd09d8d741aee0ee8c6d1a922, type: 3}
 --- !u!1 &664848230
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0.0075
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 1
@@ -999,6 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 12
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.4
@@ -1053,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0.015
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.8
@@ -1125,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 3.5
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.4
@@ -1179,6 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0.0075
   yPos: {x: 10.3, y: -9.6, z: -4.21}
   opaqueValue: 1
@@ -1251,6 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 12
   yPos: {x: 0, y: -12, z: 0}
   opaqueValue: 0.4
@@ -1306,6 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0.01
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.8
@@ -1378,6 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 3.5
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0.4
@@ -1398,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 12.3
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 1
@@ -1580,6 +1648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0.015
   yPos: {x: 9.55, y: -9.8, z: -2.08}
   opaqueValue: 0.8
@@ -1652,6 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 3.5
   yPos: {x: 9.55, y: -12, z: -2.08}
   opaqueValue: 0.4
@@ -2349,6 +2419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0
   yPos: {x: 9.58, y: -10, z: -0.67}
   opaqueValue: 0.6
@@ -2421,6 +2492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 3.5
   yPos: {x: 9.58, y: -12, z: -0.67}
   opaqueValue: 0.2
@@ -2476,11 +2548,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bba49a4d4fd3344a7054cf88cb6baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: {fileID: 0}
+  animationDelay: 0
   actionToConnect: 
   newSprite: {fileID: 21300000, guid: fe8cd92bb409d5543b53aebb433fd0d2, type: 3}
   numberOfCycles: 3
-  enterDelay: 1
   backDelay: 1.5
 --- !u!114 &1786271533
 MonoBehaviour:
@@ -2494,6 +2565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 2.75
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 1
@@ -2566,6 +2638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 11.5
   yPos: {x: 0, y: 0, z: 0}
   opaqueValue: 0
@@ -2673,11 +2746,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bba49a4d4fd3344a7054cf88cb6baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: {fileID: -944628639613478452, guid: 49ddea46669fbd144a02d9ee1607a5ed, type: 3}
+  animationDelay: 0
   actionToConnect: Right
   newSprite: {fileID: 21300000, guid: fe8cd92bb409d5543b53aebb433fd0d2, type: 3}
   numberOfCycles: 3
-  enterDelay: 1
   backDelay: 2
 --- !u!114 &1886134854
 MonoBehaviour:
@@ -2691,6 +2763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 2.5
   yPos: {x: 12.6, y: 0, z: -4.37}
   opaqueValue: 1
@@ -2711,6 +2784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 11.5
   yPos: {x: 12.6, y: 20, z: -4.37}
   opaqueValue: 0
@@ -2766,6 +2840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 0.01
   yPos: {x: 9.55, y: -9.8, z: 0.93}
   opaqueValue: 0.8
@@ -2838,6 +2913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 3.5
   yPos: {x: 9.55, y: -12, z: 0.93}
   opaqueValue: 0.4
@@ -2858,6 +2934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b605c997cb49e4ca7086bd24e56f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKeyFrame: 0
   animationDelay: 12.3
   yPos: {x: 9.55, y: -9.6, z: 0.93}
   opaqueValue: 1
@@ -3290,7 +3367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2133899602
 Transform:
   m_ObjectHideFlags: 0
@@ -3374,3 +3451,4 @@ SceneRoots:
   - {fileID: 2076005710}
   - {fileID: 2066761249}
   - {fileID: 2133899602}
+  - {fileID: 574872035}

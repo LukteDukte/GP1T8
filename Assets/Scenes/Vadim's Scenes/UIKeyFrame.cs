@@ -6,14 +6,14 @@ using UnityEngine.InputSystem;
 
 public class UIKeyFrame : MonoBehaviour
 {
-    [SerializeField] private InputActionAsset actions;
+
+    [SerializeField] private float animationDelay = 0f;
 
     [SerializeField] private string actionToConnect;
 
     [SerializeField] private Sprite newSprite;
 
     [SerializeField] private int numberOfCycles = 3;
-    [SerializeField] private float enterDelay = 1f;
     [SerializeField] private float backDelay = 2f;
     private Sprite standardSprite;
     private SpriteRenderer renderer;
@@ -25,18 +25,26 @@ public class UIKeyFrame : MonoBehaviour
     }
     private void OnEnable()
     {
-        actions.FindAction(actionToConnect).performed += ctx => isPerformed = true;
+        Work(true);
     }
-    public void Work()
+    public void Work(bool canAnimate)
     {
-        StopCoroutine(ChangeSprite());
-        StartCoroutine(ChangeSprite());
+        if (canAnimate)
+        {
+            StopCoroutine(ChangeSprite());
+            StartCoroutine(ChangeSprite());
+        } else
+        {
+            StopCoroutine(ChangeSprite());
+            renderer.sprite = standardSprite;
+
+        }
     }
     public IEnumerator ChangeSprite()
     {
        for (int i = 0; i < numberOfCycles; i++)
         {
-            yield return new WaitForSeconds(enterDelay);
+            yield return new WaitForSeconds(animationDelay);
             renderer.sprite = newSprite;
             yield return new WaitForSeconds(backDelay);
             renderer.sprite = standardSprite;
