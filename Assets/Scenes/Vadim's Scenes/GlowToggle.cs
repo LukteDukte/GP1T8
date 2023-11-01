@@ -33,11 +33,15 @@ public class GlowToggle : MonoBehaviour
         }
         else
         {
-            foreach (var renderer in renderers)
+            renderers[0].sharedMaterial = glowMaterial;
+            renderers[1].sharedMaterial = glowMaterial;
+            yield return new WaitForSeconds(.6f);
+
+            for (int i = 2; i < renderers.Length; i++)
             {
 
                 {
-                    renderer.sharedMaterial = glowMaterial;
+                    renderers[i].sharedMaterial = glowMaterial;
                 }
 
             }
