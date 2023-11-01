@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,12 +9,14 @@ public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager Instance;
 
-    //[SerializeField] TMP_Text UIScoreText;
+    [SerializeField] TMP_Text UIScoreText;
     [SerializeField] TMP_Text UIHighscoreText;
     [SerializeField] HighscoreData highscoreData;
     [SerializeField] public TMP_Text title;
     private UnityEvent noNewHighscore;
     private UnityEvent NewHighscore;
+
+    public GameObject timer;
 
     private void Awake()
     {
@@ -29,7 +32,7 @@ public class GameUIManager : MonoBehaviour
 
     private void Start()
     {
-        //UpdateUIScore();
+        UpdateUIScore();
 
         //Adds noNew & New Highscore as a listener to onTimerEnd
         noNewHighscore = Highscore.Instance.noNewHighscore;
@@ -39,9 +42,14 @@ public class GameUIManager : MonoBehaviour
         NewHighscore.AddListener(DisplayNewHighscore);
     }
 
+    private void Update()
+    {
+        UpdateUIScore();
+    }
+
     public void UpdateUIScore()
     {
-        //UIScoreText.text = Volvox.Instance.colonyCenter.childCount.ToString();
+        UIScoreText.text = "Score:" + Volvox.Instance.colonyCenter.childCount.ToString();
     }
 
     private void DisplayNoNewHighscore()
@@ -67,5 +75,10 @@ public class GameUIManager : MonoBehaviour
         yield return new WaitForSeconds(Seconds);
         
         GetComponent<ReturnToTitle>().LoadTitle();
+    }
+    
+    public void startUITimer()
+    {
+        timer.SetActive(true);
     }
 }

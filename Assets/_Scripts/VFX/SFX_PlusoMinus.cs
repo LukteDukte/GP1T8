@@ -25,5 +25,6 @@ public class SFX_PlusoMinus : MonoBehaviour
     private void OnEnable()
     {
         _timer = true;
+        gameObject.transform.localScale = VolvoxSize.instance.transform.localScale;
     }
 }

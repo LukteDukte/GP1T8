@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnerVampirella
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c796007c5d93624fb26522632db6988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vampyrellaPrefab: {fileID: 995647822943372594, guid: 18989455f83bca84fb0b182a4df8d552, type: 3}
-  vampyrellaSpawnInterval: 3
+  vampyrellaPrefab: {fileID: 3662566524848920870, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
+  vampyrellaSpawnInterval: 22
+  minAngle: -20
+  maxAngle: 20
+  objectSize: {x: 3, y: 3, z: 3}
+  colliderSize: {x: 1.3, y: 1.3, z: 1.3}
