@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143848445239238935}
   - component: {fileID: 3992254194656325781}
+  - component: {fileID: 4809578388306590458}
   m_Layer: 0
   m_Name: Area Light
   m_TagString: Untagged
@@ -94,6 +95,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &4809578388306590458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952974604183058568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &6569700021058995089
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,11 +464,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1680840443662031702, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
       propertyPath: audioClips2.Array.data[0].Volume
-      value: 0.5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680840443662031702, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
+      propertyPath: audioClips2.Array.data[1].Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680840443662031702, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
+      propertyPath: audioClips2.Array.data[2].Volume
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1680840443662031702, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
       propertyPath: audioClips2.Array.data[3].Volume
-      value: 0.5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680840443662031702, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
+      propertyPath: audioClips2.Array.data[4].Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680840443662031702, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
+      propertyPath: audioClips2.Array.data[5].Volume
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014697632557912100, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
       propertyPath: m_Name
