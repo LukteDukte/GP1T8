@@ -68,7 +68,11 @@ PrefabInstance:
       addedObject: {fileID: 1022677662935608667}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 786a1a745f3855b44ad4e9d16d2bf64a, type: 3}
       insertIndex: -1
+<<<<<<< HEAD
       addedObject: {fileID: 7350786685658113381}
+=======
+      addedObject: {fileID: 9004086484398627469}
+>>>>>>> 2494160c88234f2215d58b84d7a6458189d39f98
   m_SourcePrefab: {fileID: 100100000, guid: 786a1a745f3855b44ad4e9d16d2bf64a, type: 3}
 --- !u!1 &6585335808918226422 stripped
 GameObject:
@@ -108,7 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9759ffca13f5d41a3cf79e58320dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &7350786685658113381
+=======
+--- !u!114 &9004086484398627469
+>>>>>>> 2494160c88234f2215d58b84d7a6458189d39f98
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6585335808918226422}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 6d32d97bb571e39449f503e2b415f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -124,3 +133,12 @@ MonoBehaviour:
   isRandomRotationSpeed: 1
   initEulerAngle: {x: 0, y: 0, z: 0}
   RotationSpeedInEulerAngle: {x: 0, y: 0, z: 0}
+=======
+  m_Script: {fileID: 11500000, guid: d6f3f0728d16e6f478f3c36176348ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.2
+  movementSpeed: 1.1
+  maxRotationSpeed: 17
+  maxMovementSpeed: 0.1
+>>>>>>> 2494160c88234f2215d58b84d7a6458189d39f98
