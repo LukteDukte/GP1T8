@@ -830,13 +830,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightActivates: {fileID: 4978737493423065906}
   lightHums: {fileID: 520726854864578040}
-  audioClips:
-  - {fileID: 8300000, guid: 0dca1f9ed54be444da0065aa30175eab, type: 3}
-  - {fileID: 8300000, guid: 9f95f7b127c8d454886facce05979950, type: 3}
-  - {fileID: 8300000, guid: 09f2a8e84e3fb8943960966877f91bfb, type: 3}
-  - {fileID: 8300000, guid: d4073a8ed9f67f849b3a2df87ba6b035, type: 3}
-  - {fileID: 8300000, guid: 6f170a89416667a4a9a98694518d189c, type: 3}
-  - {fileID: 8300000, guid: 8428339955d705247b9bfe06926824e8, type: 3}
   audioClips2:
   - Clip: {fileID: 8300000, guid: 0dca1f9ed54be444da0065aa30175eab, type: 3}
     Volume: 1
@@ -850,7 +843,7 @@ MonoBehaviour:
     Volume: 1
   - Clip: {fileID: 8300000, guid: 8428339955d705247b9bfe06926824e8, type: 3}
     Volume: 1
-  lightPositionSlider: {fileID: 8525023578554967665}
+  _lightPositionSlider: {fileID: 8525023578554967665}
 --- !u!1001 &4754365152416652240
 PrefabInstance:
   m_ObjectHideFlags: 0
