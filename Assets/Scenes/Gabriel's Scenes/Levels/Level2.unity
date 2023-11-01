@@ -205,8 +205,8 @@ MonoBehaviour:
   - {fileID: 6585335808918226422, guid: 045061a60723f70449bc51774bf4e3d0, type: 3}
   - {fileID: 8430041764327417964, guid: 0a019d5293024474a882fbdbd80f57d6, type: 3}
   spawnPoints: []
-  maxFoodInstances: 3
-  minFoodInstances: 3
+  maxFoodInstances: 2
+  minFoodInstances: 2
   foodTag: Food
   spawnRadius: 1
 --- !u!1001 &499079766
