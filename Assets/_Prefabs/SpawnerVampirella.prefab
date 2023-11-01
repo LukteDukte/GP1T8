@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vampyrellaPrefab: {fileID: 3662566524848920870, guid: 7e7cf40f9ce8fce418b0d8a8ea27e8b6, type: 3}
-  vampyrellaSpawnInterval: 15
+  vampyrellaSpawnInterval: 22
   minAngle: -20
   maxAngle: 20
   objectSize: {x: 3, y: 3, z: 3}

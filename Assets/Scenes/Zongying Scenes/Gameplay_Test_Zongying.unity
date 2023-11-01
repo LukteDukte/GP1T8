@@ -3453,8 +3453,8 @@ MonoBehaviour:
   - {fileID: 730666028}
   - {fileID: 730666028}
   - {fileID: 730666028}
-  colonyRequiredToTheNextLevel: 000000000100000002000000030000000400000005000000
-  indexOfSceneToLoad: 2
+  colonyRequiredToTheNextLevel: 000000000300000004000000050000000600000007000000
+  indexOfSceneToLoad: 1
   maxLevel: 5
   isCountingDown: 0
 --- !u!4 &1373795798
