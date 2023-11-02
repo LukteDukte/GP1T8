@@ -18,6 +18,9 @@ public class GameUIManager : MonoBehaviour
 
     public GameObject timer;
 
+    [SerializeField] GameObject UIYourScoreTexture;
+    [SerializeField] GameObject UIHighScoreTexture;
+
     private void Awake()
     {
         if(Instance == null)
@@ -38,8 +41,8 @@ public class GameUIManager : MonoBehaviour
         noNewHighscore = Highscore.Instance.noNewHighscore;
         NewHighscore = Highscore.Instance.newHighscore;
 
-        noNewHighscore.AddListener(DisplayScore);
-        NewHighscore.AddListener(DisplayNewHighscore);
+        noNewHighscore.AddListener(DisplayYourScore);
+        NewHighscore.AddListener(DisplayYourScore);
     }
 
     private void Update()
@@ -52,10 +55,10 @@ public class GameUIManager : MonoBehaviour
         UIScoreText.text = "Score:" + Volvox.Instance.colonyCenter.childCount.ToString();
     }
 
-    private void DisplayScore()
+    private void DisplayYourScore()
     {
-        UIHighscoreText.text = "YOUR SCORE: " + Volvox.Instance.colonyCenter.childCount.ToString();
-
+        UIHighscoreText.text = ": " + Volvox.Instance.colonyCenter.childCount.ToString();
+        UIYourScoreTexture.SetActive(true);
         //print(GameObject.FindFirstObjectByType<Button>().gameObject.name);
 
         //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
@@ -64,7 +67,8 @@ public class GameUIManager : MonoBehaviour
     }
     private void DisplayNewHighscore()
     {
-        UIHighscoreText.text = "NEW HIGH SCORE: " + highscoreData.highscore.ToString();
+        UIHighscoreText.text = ": " + highscoreData.highscore.ToString();
+        UIHighScoreTexture.SetActive(true);
 
         //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
         StartCoroutine(ReturnToTitle(10));
