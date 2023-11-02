@@ -52,7 +52,7 @@ public class GameUIManager : MonoBehaviour
 
     public void UpdateUIScore()
     {
-        UIScoreText.text = "Score:" + Volvox.Instance.colonyCenter.childCount.ToString();
+        UIScoreText.text = "Score: " + Volvox.Instance.colonyCenter.childCount.ToString();
     }
 
     private void DisplayYourScore()
