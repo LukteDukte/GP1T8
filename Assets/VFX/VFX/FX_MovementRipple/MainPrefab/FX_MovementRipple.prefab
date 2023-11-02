@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4241568148166359000}
   - component: {fileID: 3919263323176465283}
   - component: {fileID: 9022740469315756335}
+  - component: {fileID: 7513840704127688294}
   m_Layer: 0
   m_Name: Bubbles
   m_TagString: Untagged
@@ -4861,6 +4862,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &7513840704127688294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692657190417324894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9235939d74a4bbe45a0c7890b152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7396367034437621150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,6 +4885,7 @@ GameObject:
   - component: {fileID: 7587945992455054793}
   - component: {fileID: 2354833574995431814}
   - component: {fileID: 8208799157939617550}
+  - component: {fileID: 2798707536253486108}
   m_Layer: 0
   m_Name: Ripples
   m_TagString: Untagged
@@ -9689,3 +9703,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2798707536253486108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7396367034437621150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9235939d74a4bbe45a0c7890b152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
