@@ -59,7 +59,7 @@ public class GameUIManager : MonoBehaviour
     {
         deathCamera.SetActive(true);
 
-        UIHighscoreText.text = ": " + highscoreData.highscore.ToString();
+        UIHighscoreText.text = ": " + Volvox.Instance.colonyCenter.childCount.ToString();
         UIYourScoreTexture.SetActive(true);
 
         //print(GameObject.FindFirstObjectByType<Button>().gameObject.name);
@@ -72,7 +72,7 @@ public class GameUIManager : MonoBehaviour
     {
         deathCamera.SetActive(true);
 
-        UIHighscoreText.text = ": " + highscoreData.highscore.ToString();
+        UIHighscoreText.text = ": " + Volvox.Instance.colonyCenter.childCount.ToString();
         UIYourScoreTexture.SetActive(true);
 
         //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
