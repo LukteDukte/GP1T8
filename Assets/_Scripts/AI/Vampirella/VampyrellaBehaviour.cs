@@ -62,21 +62,29 @@ public class VampyrellaBehaviour : MonoBehaviour
                 gameObject.transform.Translate(Vector3.forward * (Time.fixedDeltaTime * movementSpeed));
                 break; // Moves in a straight line.
             case EnemyState.Chasing:
-                gameObject.transform.LookAt(player.transform);
-                gameObject.transform.Translate(Vector3.forward * (Time.fixedDeltaTime * movementSpeed));
-                TimerCountdown();
-                if (giveUpChaseTimer < _timer)
+                if (Volvox.Instance.isAttacked)
                 {
-                    TimerReset();
-                    gameObject.transform.LookAt(player.transform.position * -1);
-                    _enemyState = EnemyState.GoesAway;
-                }
-                else if (Vector3.Distance(gameObject.transform.position, player.transform.position) < attachDistance)
-                {
-                    audioSource.PlayOneShot(audioClips[0]);
-                    TimerReset();
-                    _offset = transform.position - player.transform.position;
                     _enemyState = EnemyState.Attached;
+                }
+                else
+                {
+                    gameObject.transform.LookAt(player.transform);
+                    gameObject.transform.Translate(Vector3.forward * (Time.fixedDeltaTime * movementSpeed));
+                    TimerCountdown();
+                    if (giveUpChaseTimer < _timer)
+                    {
+                        TimerReset();
+                        gameObject.transform.LookAt(player.transform.position * -1);
+                        _enemyState = EnemyState.GoesAway;
+                    }
+                    else if (Vector3.Distance(gameObject.transform.position, player.transform.position) <
+                             attachDistance)
+                    {
+                        audioSource.PlayOneShot(audioClips[0]);
+                        TimerReset();
+                        _offset = transform.position - player.transform.position;
+                        _enemyState = EnemyState.Attached;
+                    }
                 }
 
                 break; // Moves towards the player. It will give up after a certain amount of time, based on [giveUpTimer]. It also sets the enemy state to [Attached] if it gets close enough to the player.
@@ -85,6 +93,7 @@ public class VampyrellaBehaviour : MonoBehaviour
                 {
                     hasAttached = true;
                     // Only run this code block once when transitioning to the Attached state
+                    Volvox.Instance.isAttacked = true;
                     // ...
                 }
 
@@ -97,6 +106,7 @@ public class VampyrellaBehaviour : MonoBehaviour
                     TimerReset();
                     gameObject.transform.LookAt(player.transform.position * -1);
                     _enemyState = EnemyState.GoesAway;
+                    Volvox.Instance.isAttacked = false;
                 }
 
                 break; // Sticks to the player and deals 1 damage, aka takes 1 colony.
@@ -129,9 +139,11 @@ public class VampyrellaBehaviour : MonoBehaviour
     {
         if (collision.GetComponent<VolvoxHealth>() && !hasAttached)
         {
+            volvoxScript = collision.GetComponent<Volvox>();
+            if(volvoxScript.isAttacked) return;
+            
             _enemyState = EnemyState.Chasing;
             player = collision.GetComponent<Volvox>().gameObject;
-            volvoxScript = collision.GetComponent<Volvox>();
             // Add some additional force towards volvox transform
             // then add force and disappearing movementspeed in the other direction, or just destroy?
         }
