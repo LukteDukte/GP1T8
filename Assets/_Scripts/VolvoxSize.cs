@@ -45,9 +45,9 @@ public class VolvoxSize : MonoBehaviour
 
     private void UpdateSizeLevel()
     {
-        sizeLevel = Mathf.FloorToInt((float)Volvox.Instance.colonyCenter.childCount / sizeUpRequirement);
         if (LoadThisAddedtiveScene.Instance.IfReachRequiredAmount(Volvox.Instance.colonyCenter.childCount))
         {
+            sizeLevel = Mathf.FloorToInt((float)Volvox.Instance.colonyCenter.childCount / sizeUpRequirement);
             LoadThisAddedtiveScene.Instance.LoadNextLevel();
         }
     }
