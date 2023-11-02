@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RotiferSpawner : MonoBehaviour
 {
@@ -64,6 +65,7 @@ public class RotiferSpawner : MonoBehaviour
     {
         // Debug.Log("Hello" + PlayerManager.Instance.RandomPointWithinProjectedRange());
         transform.position = PlayerManager.Instance.RandomPointWithinProjectedRange();
+        transform.rotation = Quaternion.Euler(0, Random.Range(0f,360f), 0);
         whirlpool.play = true;
         whirlpool.isSucking = true;
         rotifer.ClearMouth();
@@ -97,6 +99,7 @@ public class RotiferSpawner : MonoBehaviour
         rotiferPrefab.SetActive(false);
         yield return new WaitForSeconds(disappearInterval);
         transform.position = PlayerManager.Instance.RandomPointWithinProjectedRange();
+        transform.rotation = Quaternion.Euler(0, Random.Range(0f,360f), 0);
         bubble.Play();
         yield return new WaitForSeconds(bubbleInterval);
         whirlpool.play = true;
