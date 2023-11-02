@@ -5,6 +5,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+[Serializable]
+class SFX_AudioClips2
+{
+    public AudioClip Clip;
+    [Range(0, 1)]
+    public float Volume;
+}
 public class VampyrellaBehaviour : MonoBehaviour
 {
     #region Config
@@ -17,6 +24,7 @@ public class VampyrellaBehaviour : MonoBehaviour
     [SerializeField] float attachDistance;
     [Header("Audio")] [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] audioClips;
+    [SerializeField] SFX_AudioClips2[] audioClips2;
     [Space(15)] [SerializeField] private Transform mouth;
     [SerializeField] GameObject player;
     [SerializeField] Volvox volvoxScript;
@@ -73,7 +81,9 @@ public class VampyrellaBehaviour : MonoBehaviour
                 }
                 else if (Vector3.Distance(gameObject.transform.position, player.transform.position) < attachDistance)
                 {
-                    audioSource.PlayOneShot(audioClips[0]);
+                    //audioSource.PlayOneShot(audioClips[0]);
+                    audioSource.volume = audioClips2[0].Volume;
+                    audioSource.PlayOneShot(audioClips2[0].Clip);
                     TimerReset();
                     _offset = transform.position - player.transform.position;
                     _enemyState = EnemyState.Attached;
@@ -93,7 +103,9 @@ public class VampyrellaBehaviour : MonoBehaviour
                 if (attachedToPlayerTimer < _timer)
                 {
                     volvoxScript.RemoveColony();
-                    audioSource.PlayOneShot(audioClips[1]);
+                    //audioSource.PlayOneShot(audioClips[1]);
+                    audioSource.volume = audioClips2[1].Volume;
+                    audioSource.PlayOneShot(audioClips2[1].Clip);
                     TimerReset();
                     gameObject.transform.LookAt(player.transform.position * -1);
                     _enemyState = EnemyState.GoesAway;
