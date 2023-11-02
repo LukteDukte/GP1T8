@@ -19,11 +19,12 @@ public class UIEmerge : MonoBehaviour
     {
         renderer = GetComponent<SpriteRenderer>();
         frameAnimation = GetComponent<UIKeyFrame>();
-        Invoke("MoveUpwards", animationDelay);
+        StartCoroutine(MoveUpwards());
 
     }
-    public void MoveUpwards()
+    public IEnumerator MoveUpwards()
     {
+        yield return new WaitForSeconds(animationDelay);
         Color opaque = new Color(renderer.color.r, renderer.color.g, renderer.color.b, opaqueValue);
         transform.DOLocalMove(yPos, moveDuration).SetEase(moveEase, easeDuration);
 

@@ -15,7 +15,17 @@ public class GlowToggle : MonoBehaviour
     {
         StartCoroutine(ToggleGlow());
     }
+    private void OnDisable()
+    {
+        foreach (var renderer in renderers)
+        {
 
+            {
+                renderer.sharedMaterial = standardMaterial;
+            }
+
+        }
+    }
 
     public IEnumerator ToggleGlow()
     {

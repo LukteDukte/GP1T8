@@ -16,7 +16,7 @@ public class TutorialSetter : MonoBehaviour
         emerges = GetComponentsInChildren<UIEmerge>();
         DisableObjects();
     }
-    private void Update()
+    private void Start()
     {
         if (gameObject.activeSelf && shouldEnable)
         {
@@ -25,10 +25,14 @@ public class TutorialSetter : MonoBehaviour
     }
     private IEnumerator EnableDisable()
     {
-        yield return new WaitForSeconds(waitTime);
-        EnableObjects();
-        yield return new WaitForSeconds(overallAnimationTime);
-        DisableObjects();
+        while(gameObject.activeSelf && shouldEnable)
+        {
+            yield return new WaitForSeconds(waitTime);
+            EnableObjects();
+            yield return new WaitForSeconds(overallAnimationTime);
+            DisableObjects();
+        }
+       
     }
     private void EnableObjects()
     {
