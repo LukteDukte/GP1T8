@@ -56,6 +56,11 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 7904790ccf2634f4e986a9db74432bf5, type: 3}
   - {fileID: 8300000, guid: 8b6c9e793021a2c43904ab932b788d70, type: 3}
+  audioClips2:
+  - Clip: {fileID: 8300000, guid: 7904790ccf2634f4e986a9db74432bf5, type: 3}
+    Volume: 0.7
+  - Clip: {fileID: 8300000, guid: 8b6c9e793021a2c43904ab932b788d70, type: 3}
+    Volume: 0.7
   mouth: {fileID: 0}
   player: {fileID: 0}
   volvoxScript: {fileID: 0}
