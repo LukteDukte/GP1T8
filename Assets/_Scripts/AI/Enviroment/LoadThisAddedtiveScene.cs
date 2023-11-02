@@ -15,7 +15,7 @@ public class LoadThisAddedtiveScene : MonoBehaviour
 
     public int[] colonyRequiredToTheNextLevel;
     
-    private int currentLevel = 1;
+    public int currentLevel = 1;
     public int indexOfSceneToLoad;
     public int maxLevel = 5;
     public bool isCountingDown = false;
