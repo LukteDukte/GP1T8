@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class GameUIManager : MonoBehaviour
 {
     public static GameUIManager Instance;
-
+    [SerializeField] GameObject deathCamera;
     [SerializeField] TMP_Text UIScoreText;
     [SerializeField] TMP_Text UIHighscoreText;
     [SerializeField] HighscoreData highscoreData;
@@ -38,7 +38,7 @@ public class GameUIManager : MonoBehaviour
         noNewHighscore = Highscore.Instance.noNewHighscore;
         NewHighscore = Highscore.Instance.newHighscore;
 
-        noNewHighscore.AddListener(DisplayScore);
+        noNewHighscore.AddListener(DisplayNoNewHighscore);
         NewHighscore.AddListener(DisplayNewHighscore);
     }
 
@@ -52,9 +52,11 @@ public class GameUIManager : MonoBehaviour
         UIScoreText.text = "Score:" + Volvox.Instance.colonyCenter.childCount.ToString();
     }
 
-    private void DisplayScore()
+    private void DisplayNoNewHighscore()
     {
-        UIHighscoreText.text = "YOUR SCORE: " + Volvox.Instance.colonyCenter.childCount.ToString();
+        deathCamera.SetActive(true);
+
+        UIHighscoreText.text = "YOUR SCORE: " + highscoreData.highscore.ToString();
 
         //print(GameObject.FindFirstObjectByType<Button>().gameObject.name);
 
@@ -64,6 +66,8 @@ public class GameUIManager : MonoBehaviour
     }
     private void DisplayNewHighscore()
     {
+        deathCamera.SetActive(true);
+
         UIHighscoreText.text = "NEW HIGH SCORE: " + highscoreData.highscore.ToString();
 
         //GameObject.FindFirstObjectByType<Button>().gameObject.SetActive(true);
