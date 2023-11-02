@@ -603,6 +603,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 203044129}
     - target: {fileID: 2541634920685347918, guid: 2414cc906effa444685aaa3436e97417, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2dd6c2106caf20e4fa43ce6d7509747a, type: 2}
+    - target: {fileID: 2541634920685347918, guid: 2414cc906effa444685aaa3436e97417, type: 3}
       propertyPath: m_fontColor.a
       value: 1
       objectReference: {fileID: 0}
@@ -619,8 +623,16 @@ PrefabInstance:
       value: 0.5803922
       objectReference: {fileID: 0}
     - target: {fileID: 2541634920685347918, guid: 2414cc906effa444685aaa3436e97417, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -544531279579120220, guid: 2dd6c2106caf20e4fa43ce6d7509747a, type: 2}
+    - target: {fileID: 2541634920685347918, guid: 2414cc906effa444685aaa3436e97417, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291543956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541634920685347918, guid: 2414cc906effa444685aaa3436e97417, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2643582717257627307, guid: 2414cc906effa444685aaa3436e97417, type: 3}
       propertyPath: m_IsActive
@@ -1660,6 +1672,7 @@ MonoBehaviour:
   - {fileID: 371530873}
   - {fileID: 658605137}
   colonyRequiredToTheNextLevel: 0000000006000000100000001c0000002a00000064000000
+  currentLevel: 1
   indexOfSceneToLoad: 1
   maxLevel: 5
   isCountingDown: 0
@@ -2365,6 +2378,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42ac5219b09d5814b932aaefdd0b866d, type: 3}
+--- !u!1 &984325028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2733850293887319224, guid: 2414cc906effa444685aaa3436e97417, type: 3}
+  m_PrefabInstance: {fileID: 342245347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1020508412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2404,11 +2422,11 @@ PrefabInstance:
     - target: {fileID: 2460370943198411816, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: vfx_ColonyPlus
       value: 
-      objectReference: {fileID: 3280532664875263046, guid: c16e9d0158634b94ca578e17fc36fa9e, type: 3}
+      objectReference: {fileID: 8061957920273469990, guid: 9ada6cb5f74333944a710edd489d1e5c, type: 3}
     - target: {fileID: 2460370943198411816, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: vfx_ColonyMinus
       value: 
-      objectReference: {fileID: 837857337757355057, guid: 5b0537fdb0284c649a2bf7e57ef7a6cd, type: 3}
+      objectReference: {fileID: 2354593425659304919, guid: 93f17a6fc5489724098701cc26c43fdc, type: 3}
     - target: {fileID: 2460370943198411816, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: preventOvershootingFactor
       value: 1.5
@@ -2419,7 +2437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2550594290139305827, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2550594290139305827, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2456,7 +2474,7 @@ PrefabInstance:
     - target: {fileID: 2550594290139305827, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 3014697632557912100, guid: 20125e8441a68394c9e3aba2e321aa6a, type: 3}
+      objectReference: {fileID: 984325028}
     - target: {fileID: 2550594290139305827, guid: 4f84e6bfe06ca9548b5da8e68fcdbd99, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
