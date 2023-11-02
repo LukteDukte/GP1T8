@@ -15,15 +15,19 @@ public class Volvox : MonoBehaviour
     public float maxSpeed = 25f;
     public bool isFollowing = true;
 
+    public bool isAttacked = false;
+
     // [Header("Lerp with self position")] public float lerpSpeed = 0.1f;
 
     [Header("For Movement Control")] public Rigidbody rb;
 
+    public float maxSpeedFactor = 0.1f;
     [FormerlySerializedAs("controlParam_Proportion")]
     public float speedFactor = 0.01f;
 
     [FormerlySerializedAs("controlParam_Differentiation")]
     public float preventOvershootingFactor = 0.42f;
+    
 
     private Vector3 error = Vector3.zero;
     private Vector3 errorLastTime = Vector3.zero;
@@ -61,6 +65,15 @@ public class Volvox : MonoBehaviour
     {
         Vector3 rotation = new Vector3(10, 10, 10) * Time.deltaTime;
         colonyCenter.transform.rotation *= Quaternion.Euler(rotation);
+
+        if (isAttacked)
+        {
+            rb.maxLinearVelocity = maxSpeed * maxSpeedFactor;
+        }
+        else
+        {
+            rb.maxLinearVelocity = maxSpeed;
+        }
     }
 
     private void FixedUpdate()
