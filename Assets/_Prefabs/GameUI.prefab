@@ -540,13 +540,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3099434057aa04c862e84de33b079a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathCamera: {fileID: 0}
   UIScoreText: {fileID: 2541634920685347918}
   UIHighscoreText: {fileID: 7192166780194949640}
   highscoreData: {fileID: 11400000, guid: bfbff8dd989e6e8479d770684b733250, type: 2}
   title: {fileID: 2995088640908715738}
   timer: {fileID: 2643582717257627307}
-  UIYourScoreTexture: {fileID: 479816786349968845}
-  UIHighScoreTexture: {fileID: 6252361153404345251}
 --- !u!114 &4646714041726271048
 MonoBehaviour:
   m_ObjectHideFlags: 0
