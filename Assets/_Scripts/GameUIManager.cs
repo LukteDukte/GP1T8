@@ -38,7 +38,7 @@ public class GameUIManager : MonoBehaviour
         noNewHighscore = Highscore.Instance.noNewHighscore;
         NewHighscore = Highscore.Instance.newHighscore;
 
-        noNewHighscore.AddListener(DisplayNoNewHighscore);
+        noNewHighscore.AddListener(DisplayScore);
         NewHighscore.AddListener(DisplayNewHighscore);
     }
 
@@ -52,9 +52,9 @@ public class GameUIManager : MonoBehaviour
         UIScoreText.text = "Score:" + Volvox.Instance.colonyCenter.childCount.ToString();
     }
 
-    private void DisplayNoNewHighscore()
+    private void DisplayScore()
     {
-        UIHighscoreText.text = "YOUR SCORE: " + highscoreData.highscore.ToString();
+        UIHighscoreText.text = "YOUR SCORE: " + Volvox.Instance.colonyCenter.childCount.ToString();
 
         //print(GameObject.FindFirstObjectByType<Button>().gameObject.name);
 
